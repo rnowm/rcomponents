@@ -1,0 +1,119 @@
+.telefonica.button {
+    font-family: "Arial", sans-serif;
+}
+
+.telefonica.btt-neutral {
+    color: white;
+    cursor: pointer;
+    background: #007486;
+    border: none;
+}
+
+.telefonica.btt-neutral:hover:enabled {
+    color: white;
+    cursor: pointer;
+    background: #077B8D;
+    border: none;
+}
+
+.telefonica.btt-neutral:active:enabled {
+    background: #198D9F;
+    outline: none !important;
+}
+
+.telefonica.btt-neutral[disabled=disabled], .telefonica.btt-neutral:disabled {
+    cursor: inherit;
+    filter: alpha( opacity=40 );
+    filter: progid:DXImageTransform.Microsoft.Alpha( opacity=0.4 );
+    opacity: .40; 
+    -khtml-opacity: .40; 
+    -moz-opacity: .40; 
+    -ms-filter: "alpha( opacity=40 )";
+}
+
+.telefonica.btt-positive {
+    color: white;
+    cursor: pointer;
+    background: #00c6d7;
+    border: none;
+}
+
+.telefonica.btt-positive:hover:enabled {
+    color: white;
+    cursor: pointer;
+    background: #07CDDE;
+    border: none;
+}
+
+.telefonica.btt-positive:active:enabled {
+    background: #19DFF0;
+    outline: none !important;
+}
+
+.telefonica.btt-positive[disabled=disabled], .telefonica.btt-positive:disabled {
+    cursor: inherit;
+    filter: alpha( opacity=40 );
+    filter: progid:DXImageTransform.Microsoft.Alpha( opacity=0.4 );
+    opacity: .40; 
+    -khtml-opacity: .40; 
+    -moz-opacity: .40; 
+    -ms-filter: "alpha( opacity=40 )";
+}
+
+.telefonica.btt-negative {
+    color: white;
+    cursor: pointer;
+    background: #ca3430;
+    border: none;
+}
+
+.telefonica.btt-negative:hover:enabled {
+    color: white;
+    cursor: pointer;
+    background: #D13B37;
+    border: none;
+}
+
+.telefonica.btt-negative:active:enabled {
+    background: #E34D49;
+    outline: none !important;
+}
+
+.telefonica.btt-negative[disabled=disabled], .telefonica.btt-negative:disabled {
+    cursor: inherit;
+    filter: alpha( opacity=40 );
+    filter: progid:DXImageTransform.Microsoft.Alpha( opacity=0.4 );
+    opacity: .40; 
+    -khtml-opacity: .40; 
+    -moz-opacity: .40; 
+    -ms-filter: "alpha( opacity=40 )";
+}
+
+.telefonica.btt-subdued {
+    color: white;
+    cursor: pointer;
+    background: #cfcece;
+    border: none;
+}
+
+.telefonica.btt-subdued:hover:enabled {
+    color: white;
+    cursor: pointer;
+    background: #D6D5D5;
+    border: none;
+}
+
+.telefonica.btt-subdued:active:enabled {
+    background: #E8E7E7;
+    outline: none !important;
+}
+
+.telefonica.btt-subdued[disabled=disabled], .telefonica.btt-subdued:disabled {
+    cursor: inherit;
+    filter: alpha( opacity=40 );
+    filter: progid:DXImageTransform.Microsoft.Alpha( opacity=0.4 );
+    opacity: .40; 
+    -khtml-opacity: .40; 
+    -moz-opacity: .40; 
+    -ms-filter: "alpha( opacity=40 )";
+}

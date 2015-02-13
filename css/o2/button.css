@@ -1,0 +1,119 @@
+.o2.button {
+    font-family: "Arial", sans-serif;
+}
+
+.o2.btt-neutral {
+    color: white;
+    cursor: pointer;
+    background: #336f87;
+    border: none;
+}
+
+.o2.btt-neutral:hover:enabled {
+    color: white;
+    cursor: pointer;
+    background: #346681;
+    border: none;
+}
+
+.o2.btt-neutral:active:enabled {
+    background: #3d8195;
+    outline: none !important;
+}
+
+.o2.btt-neutral[disabled=disabled], .o2 .btt-neutral:disabled {
+    cursor: inherit;
+    filter: alpha( opacity=40 );
+    filter: progid:DXImageTransform.Microsoft.Alpha( opacity=0.4 );
+    opacity: .40; 
+    -khtml-opacity: .40; 
+    -moz-opacity: .40; 
+    -ms-filter: "alpha( opacity=40 )";
+}
+
+.o2.btt-positive {
+    color: white;
+    cursor: pointer;
+    background: #01c9c4;
+    border: none;
+}
+
+.o2.btt-positive:hover:enabled {
+    color: white;
+    cursor: pointer;
+    background: #07bbba;
+    border: none;
+}
+
+.o2.btt-positive:active:enabled {
+    background: #18cdc9;
+    outline: none !important;
+}
+
+.o2.btt-positive[disabled=disabled], .o2.btt-positive:disabled {
+    cursor: inherit;
+    filter: alpha( opacity=40 );
+    filter: progid:DXImageTransform.Microsoft.Alpha( opacity=0.4 );
+    opacity: .40; 
+    -khtml-opacity: .40; 
+    -moz-opacity: .40; 
+    -ms-filter: "alpha( opacity=40 )";
+}
+
+.o2.btt-negative {
+    color: white;
+    cursor: pointer;
+    background: #c90103;
+    border: none;
+}
+
+.o2.btt-negative:hover:enabled {
+    color: white;
+    cursor: pointer;
+    background: #bb1313;
+    border: none;
+}
+
+.o2.btt-negative:active:enabled {
+    background: #cc2f2e;
+    outline: none !important;
+}
+
+.o2.btt-negative[disabled=disabled], .o2.btt-negative:disabled {
+    cursor: inherit;
+    filter: alpha( opacity=40 );
+    filter: progid:DXImageTransform.Microsoft.Alpha( opacity=0.4 );
+    opacity: .40; 
+    -khtml-opacity: .40; 
+    -moz-opacity: .40; 
+    -ms-filter: "alpha( opacity=40 )";
+}
+
+.o2.btt-subdued {
+    color: white;
+    cursor: pointer;
+    background: #a3a2a2;
+    border: none;
+}
+
+.o2.btt-subdued:hover:enabled {
+    color: white;
+    cursor: pointer;
+    background: #9a9999;
+    border: none;
+}
+
+.o2.btt-subdued:active:enabled {
+    background: #aaa9a9;
+    outline: none !important;
+}
+
+.o2.btt-subdued[disabled=disabled], .o2.btt-subdued:disabled {
+    cursor: inherit;
+    filter: alpha( opacity=40 );
+    filter: progid:DXImageTransform.Microsoft.Alpha( opacity=0.4 );
+    opacity: .40; 
+    -khtml-opacity: .40; 
+    -moz-opacity: .40; 
+    -ms-filter: "alpha( opacity=40 )";
+}

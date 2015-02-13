@@ -1,0 +1,121 @@
+.vivo.button {
+    font-family: "Officina", sans-serif;
+}
+
+.vivo.btt-neutral {
+    color: white;
+    cursor: pointer;
+    background: #1b5b9e;
+    border: none;
+}
+
+.vivo.btt-neutral:hover:enabled {
+    color: white;
+    cursor: pointer;
+    background: #205d96;
+    border: none;
+}
+
+.vivo.btt-neutral:active:enabled {
+    background: #2e72a5;
+    outline: none !important;
+}
+
+.vivo.btt-neutral[disabled=disabled], .vivo .btt-neutral:disabled {
+    cursor: inherit;
+    filter: alpha( opacity=40);
+    filter: progid:DXImageTransform.Microsoft.Alpha( opacity=0.4 );
+    opacity: .40;
+    -khtml-opacity: .40; 
+    -moz-opacity: .40; 
+    -ms-filter: "alpha( opacity=40)";
+}
+
+.vivo.btt-positive {
+    color: white;
+    cursor: pointer;
+    background: #8ab236;
+    border: none;
+}
+
+.vivo.btt-positive:hover:enabled {
+    color: white;
+    cursor: pointer;
+    background: #71ab52;
+    border: none;
+}
+
+.vivo.btt-positive:active:enabled {
+    background: #93ba53;
+    outline: none !important;
+}
+
+.vivo.btt-positive[disabled=disabled], .vivo.btt-positive:disabled {
+    cursor: inherit;
+    filter: alpha( opacity=40);
+    filter: progid:DXImageTransform.Microsoft.Alpha( opacity=0.4 );
+    opacity: .40;
+    -khtml-opacity: .40; 
+    -moz-opacity: .40; 
+    -ms-filter: "alpha( opacity=40)";
+}
+
+.vivo.btt-negative {
+    color: white;
+    cursor: pointer;
+    background: #d60101;
+    border: none;
+}
+
+.vivo.btt-negative:hover:enabled {
+    color: white;
+    cursor: pointer;
+    background: #c41412;
+    border: none;
+}
+
+.vivo.btt-negative:active:enabled {
+    background: #d3302f;
+    border: none;
+    outline: none !important;
+}
+
+.vivo.btt-negative[disabled=disabled], .vivo.btt-negative:disabled {
+    cursor: inherit;
+    filter: alpha( opacity=40);
+    filter: progid:DXImageTransform.Microsoft.Alpha( opacity=0.4 );
+    opacity: .40;
+    -khtml-opacity: .40; 
+    -moz-opacity: .40; 
+    -ms-filter: "alpha( opacity=40)";
+}
+
+.vivo.btt-subdued {
+    color: white;
+    cursor: pointer;
+    background: #a1a0a0;
+    border: none;
+}
+
+.vivo.btt-subdued:hover:enabled {
+    color: white;
+    cursor: pointer;
+    background: #999898;
+    border: none;
+}
+
+.vivo.btt-subdued:active:enabled {
+    background: #a8a8a8;
+    border: none;
+    outline: none !important;
+}
+
+.vivo.btt-subdued[disabled=disabled], .vivo.btt-subdued:disabled {
+    cursor: inherit;
+    filter: alpha( opacity=40);
+    filter: progid:DXImageTransform.Microsoft.Alpha( opacity=0.4 );
+    opacity: .40;
+    -khtml-opacity: .40; 
+    -moz-opacity: .40; 
+    -ms-filter: "alpha( opacity=40)";
+}
