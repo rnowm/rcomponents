@@ -1,6 +1,6 @@
 {
   "name": "buttons",
-  "version": "0.1.2",
+  "version": "0.1.1",
   "homepage": "https://github.com/tef-components/buttons",
   "authors": [
     "the TEF components team"
@@ -15,9 +15,18 @@
     "Gruntfile.js",
     "package.json",
     "node_modules",
-    "bower_components"
+    "bower_components",
+    "source",
+    "templates",
+    "fonts"
   ],
-  "devDependencies": {
-    "icons": "tef-components/icons"
-  }
+  "_release": "0.1.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.1.1",
+    "commit": "3afcf04c6f3d4e743e68fe6dc0f069453dcb27ca"
+  },
+  "_source": "git://github.com/tef-components/icons.git",
+  "_target": "*",
+  "_originalSource": "tef-components/icons"
 }

@@ -1,0 +1,51 @@
+.tef-button {
+  font-family: "Arial", sans-serif;
+  background-color: #2280a6;
+}
+.tef-button:hover,
+.tef-button:focus {
+  background-color: #267a9c;
+}
+.tef-button:active {
+  background-color: #398daf;
+}
+.tef-button.positive {
+  background-color: #8cc238;
+}
+.tef-button.positive:hover,
+.tef-button.positive:focus {
+  background-color: #85b63a;
+}
+.tef-button.positive:active {
+  background-color: #98c84c;
+}
+.tef-button.negative {
+  background-color: #c60606;
+}
+.tef-button.negative:hover,
+.tef-button.negative:focus {
+  background-color: #b90d0d;
+}
+.tef-button.negative:active {
+  background-color: #cc1f1f;
+}
+.tef-button.subdued {
+  background-color: #75777b;
+}
+.tef-button.subdued:hover,
+.tef-button.subdued:focus {
+  background-color: #707276;
+}
+.tef-button.subdued:active {
+  background-color: #838588;
+}
+.tef-button.significant {
+  background-color: #00c6d6;
+}
+.tef-button.significant:hover,
+.tef-button.significant:focus {
+  background-color: #07b9c8;
+}
+.tef-button.significant:active {
+  background-color: #1accda;
+}

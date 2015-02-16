@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>icons</title>
+    <style>
+    body {
+        margin:0;
+        padding:10px 20px;
+        background:#fff;
+        color:#222;
+        }
+    h1, div, footer {
+        font-family:"Helvetica Neue", Arial, sans-serif;
+        }
+    h1 {
+        margin:20px 0 10px;
+        font-size:30px;
+        font-weight:normal;
+        }
+    .icons__item,
+    .icons__item i {
+        line-height: 40px;
+        cursor:pointer;
+        }
+    .icons__item:before {
+        width: 40px;
+        text-align: center;
+        top: 7px;
+        position: relative;
+        }
+    .icons__item:hover {
+        color:#3c90be;
+        }
+    .icons__item i {
+        position: static;
+        padding-right: 40px;
+        text-rendering:optimizeLegibility;
+        -webkit-font-smoothing:antialiased;
+        -moz-osx-font-smoothing:grayscale;
+    }
+    footer {
+        margin-top:40px;
+        font-size:14px;
+        color:#999;
+        }
+    </style>
+    <link rel="stylesheet" href="icons.css">
+  </head>
+  <body>
+      <h1>Usage</h1>
+      <pre><code>&lt;i data-icon=&quot;<span id="name">name</span>&quot;&gt;&lt;/i&gt;</code></pre>
+      
+      <pre><code>&lt;i class=&quot;ligature-icons&quot;&gt;<span id="name2">name</span>&lt;/i&gt;</code></pre>
+      
+      <p>(Click on an icon to get the class name)</p>
+
+      <h1>icons</h1>
+
+      <div class="icons" id="icons">
+          
+              <div class="icons__item" data-icon="close"> close</div>
+          
+              <div class="icons__item" data-icon="minus"> minus</div>
+          
+              <div class="icons__item" data-icon="plus"> plus</div>
+          
+      </div>
+
+      
+      <div class="ligature-icons" style="display:none">
+          
+              close
+          
+              minus
+          
+              plus
+          
+      </div>
+      
+
+
+      <script>
+      (function() {
+          document.getElementById('icons').onclick = function(e) {
+              e = e || window.event;
+              var name = e.target.getAttribute('data-icon') || e.target.parentNode.getAttribute('data-icon');
+              document.getElementById('name').innerHTML = name;
+              document.getElementById('name2').innerHTML = name;
+          }
+      })();
+      </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+.tef-button {
+  font-family: @family;
+  background-color: @color;
+
+  &:hover,
+  &:focus { background-color: @colorHover; }
+  &:active { background-color: @colorActive; }
+
+  &.positive {
+    background-color: @positive;
+    &:hover, &:focus { background-color: @positiveHover; }
+    &:active { background-color: @positiveActive; }
+  }
+
+  &.negative {
+    background-color: @negative;
+    &:hover, &:focus { background-color: @negativeHover; }
+    &:active { background-color: @negativeActive; }
+  }
+
+  &.subdued {
+    background-color: @subdued;
+    &:hover, &:focus { background-color: @subduedHover; }
+    &:active { background-color: @subduedActive; }
+  }
+
+  &.significant {
+    background-color: @significant;
+    &:hover, &:focus { background-color: @significantHover; }
+    &:active { background-color: @significantActive; }
+  }
+}
