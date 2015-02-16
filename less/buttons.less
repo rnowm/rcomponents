@@ -5,7 +5,8 @@
 .tef-button {
   display: inline-block;
   vertical-align: middle;
-  min-width: 185px;
+  min-width: 35px;
+  max-width: 200px;
   background-image: none;
   background-color: @color;
   color: #fff;
@@ -20,6 +21,8 @@
   padding: 10px;
   cursor: pointer;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   user-select: none;
   text-decoration: none;
   touch-action: manipulation;
@@ -52,10 +55,9 @@
 
   // sizes
   &.small {
-    min-width: 93px;
     font-size: 11px;
     line-height: 13px;
-    padding: 7px 10px;
+    padding: 7px;
 
     [data-icon]:before {
       font-size: 20px;
@@ -63,10 +65,9 @@
   }
 
   &.large {
-    min-width: 219px;
     font-size: 24px;
     line-height: 26px;
-    padding: 10px;
+    padding: 10px 15px;
 
     [data-icon]:before {
       font-size: 32px;
