@@ -29,6 +29,7 @@
 .tef-button:focus {
   color: #fff;
   background-color: #077080;
+  outline: none;
 }
 .tef-button:active {
   color: #fff;

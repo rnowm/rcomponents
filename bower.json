@@ -1,12 +1,12 @@
 {
   "name": "buttons",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "homepage": "https://github.com/tef-components/buttons",
   "authors": [
     "the TEF components team"
   ],
   "description": "TEF components - buttons",
-  "main": "css/default-button.css",
+  "main": "index.html",
   "license": "MIT",
   "ignore": [
     "bower.json",
