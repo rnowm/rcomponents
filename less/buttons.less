@@ -9,7 +9,7 @@
   max-width: 200px;
   background-image: none;
   background-color: @color;
-  color: #fff;
+  color: white;
   font-family: @family;
   font-size: 14px;
   line-height: 16px;
@@ -17,16 +17,14 @@
 //  line-height: 1.42857;
   text-align: center;
   border: none;
-  border-radius: 3px;
+  border-radius: 4px;
   padding: 10px;
   cursor: pointer;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   user-select: none;
   text-decoration: none;
   touch-action: manipulation;
   .box-sizing(border-box);
+  .truncate();
 
   // states
   &:hover,
@@ -36,7 +34,8 @@
     outline: none;
   }
 
-  &:active {
+  &:active,
+  &.active {
     color: #fff;
     background-color: @colorActive;
   }
