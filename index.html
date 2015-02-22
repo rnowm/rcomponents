@@ -5,9 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>TEF components demo</title>
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="css/buttons.min.css">
+    <link id="themeFile" rel="stylesheet" href="css/buttons.min.css">
     <link rel="stylesheet" href="../icons/icons.css">
-    <link id="themeFile" rel="stylesheet" href="">
 
     <style>
       body {
@@ -185,7 +184,8 @@
       var theme = document.getElementById('themeSelector');
       theme.addEventListener('change', function() {
         var link = document.getElementById('themeFile');
-        link.href = 'css/buttons.' + theme.value + '.min.css';
+        var name = (theme.value == 'telefonica'? "" : theme.value + ".");
+        link.href = 'css/buttons.' + name + 'min.css';
       });
     </script>
   </body>

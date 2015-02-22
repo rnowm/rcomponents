@@ -1,13 +1,68 @@
 .tef-button {
-  font-family: "Officina", sans-serif;
+  display: inline-block;
+  vertical-align: middle;
+  min-width: 35px;
+  max-width: 200px;
+  background-image: none;
   background-color: #0066cc;
+  color: white;
+  font-family: "Officina", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: normal;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  touch-action: manipulation;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .tef-button:hover,
 .tef-button:focus {
+  color: #fff;
   background-color: #0763bf;
+  outline: none;
 }
-.tef-button:active {
+.tef-button:active,
+.tef-button.active {
+  color: #fff;
   background-color: #1a76d1;
+}
+.tef-button [data-icon]:before {
+  position: relative;
+  font-size: 24px;
+  line-height: 0;
+  top: 5px;
+}
+.tef-button [data-icon] + span {
+  margin-left: 7px;
+}
+.tef-button span + [data-icon] {
+  margin-left: 7px;
+}
+.tef-button.small {
+  font-size: 11px;
+  line-height: 13px;
+  padding: 7px;
+}
+.tef-button.small [data-icon]:before {
+  font-size: 20px;
+}
+.tef-button.large {
+  font-size: 24px;
+  line-height: 26px;
+  padding: 10px 15px;
+}
+.tef-button.large [data-icon]:before {
+  font-size: 32px;
 }
 .tef-button.positive {
   background-color: #99cc33;
@@ -48,4 +103,12 @@
 }
 .tef-button.significant:active {
   background-color: #ffa31a;
+}
+.tef-button[disabled],
+.tef-button.disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+.tef-button + .tef-button {
+  margin-left: 7px;
 }
