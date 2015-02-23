@@ -4,9 +4,6 @@ module.exports = function(grunt) {
   grunt.initConfig({
     less: {
       development: {
-        options: {
-          optimization: 2
-        },
         files: {
           "css/buttons.css": "less/buttons.less",
           "css/buttons.movistar.css": "less/movistar.less",
@@ -28,6 +25,7 @@ module.exports = function(grunt) {
         }
       }
     },
+
     watch: {
       styles: {
         files: ['less/**/*.less'], // which files to watch
@@ -36,8 +34,18 @@ module.exports = function(grunt) {
           nospawn: true
         }
       }
-    }
+    },
+
+    autoprefixer: {
+      options: {
+        browsers: ['last 5 versions']
+      },
+      dist: {
+        src: 'css/*.css'
+      },
+    },
   });
 
-  grunt.registerTask('default', ['less', 'watch']);
+  grunt.registerTask('default', ['less','watch']);
+  grunt.registerTask('dist', 'autoprefixer');
 };
