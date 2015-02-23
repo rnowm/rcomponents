@@ -15,9 +15,13 @@
   border-radius: 4px;
   padding: 10px;
   cursor: pointer;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   text-decoration: none;
-  touch-action: manipulation;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
   box-sizing: border-box;
   white-space: nowrap;
   overflow: hidden;

@@ -11,7 +11,6 @@
   "ignore": [
     "bower.json",
     ".gitignore",
-    "pre-commit.sh",
     "README.md",
     "Gruntfile.js",
     "package.json",

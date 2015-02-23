@@ -28,8 +28,8 @@ module.exports = function(grunt) {
 
     watch: {
       styles: {
-        files: ['less/**/*.less'], // which files to watch
-        tasks: ['less'],
+        files: ['less/**/*.less'],
+        tasks: ['less', 'autoprefixer'],
         options: {
           nospawn: true
         }
@@ -46,6 +46,5 @@ module.exports = function(grunt) {
     },
   });
 
-  grunt.registerTask('default', ['less','watch']);
-  grunt.registerTask('dist', 'autoprefixer');
+  grunt.registerTask('default', ['less','autoprefixer','watch']);
 };
