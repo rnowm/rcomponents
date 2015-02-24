@@ -1,6 +1,12 @@
+@font-face {
+  font-family: "Officina";
+  src: url("../fonts/officinaserif-book-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
 .tef-button {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
   min-width: 35px;
   max-width: 200px;
   background-image: none;
@@ -8,12 +14,12 @@
   color: white;
   font-family: "Officina", sans-serif;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.42857;
   font-weight: normal;
   text-align: center;
   border: none;
   border-radius: 4px;
-  padding: 10px;
+  padding: 7px 10px;
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -52,16 +58,14 @@
 }
 .tef-button.small {
   font-size: 11px;
-  line-height: 13px;
-  padding: 7px;
+  padding: 6px 7px;
 }
 .tef-button.small [data-icon]:before {
   font-size: 20px;
 }
 .tef-button.large {
   font-size: 24px;
-  line-height: 26px;
-  padding: 10px 15px;
+  padding: 6px 15px;
 }
 .tef-button.large [data-icon]:before {
   font-size: 32px;

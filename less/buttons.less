@@ -4,7 +4,7 @@
 
 .tef-button {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
   min-width: 35px;
   max-width: 200px;
   background-image: none;
@@ -12,13 +12,12 @@
   color: white;
   font-family: @family;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.42857;
   font-weight: normal;
-//  line-height: 1.42857;
   text-align: center;
   border: none;
   border-radius: 4px;
-  padding: 10px;
+  padding: 7px 10px;
   cursor: pointer;
   user-select: none;
   text-decoration: none;
@@ -60,8 +59,7 @@
   // sizes
   &.small {
     font-size: 11px;
-    line-height: 13px;
-    padding: 7px;
+    padding: 6px 7px;
 
     [data-icon]:before {
       font-size: 20px;
@@ -70,8 +68,7 @@
 
   &.large {
     font-size: 24px;
-    line-height: 26px;
-    padding: 10px 15px;
+    padding: 6px 15px;
 
     [data-icon]:before {
       font-size: 32px;
