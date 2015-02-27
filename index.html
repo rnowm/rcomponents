@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>TEF components demo</title>
     <meta name="viewport" content="width=device-width">
-    <link id="themeFile" rel="stylesheet" href="css/buttons.min.css">
+    <link id="themeFile" rel="stylesheet" href="css/buttons.telefonica.min.css">
     <link rel="stylesheet" href="../icons/icons.css">
 
     <style>
@@ -47,8 +47,11 @@
 
     <h2>Default</h2>
     <div>
+      <a class="tef-button small">a</a>
       <button class="tef-button small">Small</button>
+      <a class="tef-button">a</a>
       <button class="tef-button">Default</button>
+      <a class="tef-button large">a</a>
       <button class="tef-button large">Large</button>
     </div>
     <code>
@@ -184,8 +187,7 @@
       var theme = document.getElementById('themeSelector');
       theme.addEventListener('change', function() {
         var link = document.getElementById('themeFile');
-        var name = (theme.value == 'telefonica'? "" : theme.value + ".");
-        link.href = 'css/buttons.' + name + 'min.css';
+        link.href = 'css/buttons.' + theme.value + '.min.css';
       });
     </script>
   </body>
