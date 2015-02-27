@@ -4,7 +4,7 @@ button::-moz-focus-inner {
 }
 .tef-button {
   display: inline-block;
-  vertical-align: bottom;
+  vertical-align: middle;
   min-width: 35px;
   max-width: 200px;
   background-image: none;
