@@ -5,155 +5,119 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>TEF components demo</title>
     <meta name="viewport" content="width=device-width">
-    <link id="themeFile" rel="stylesheet" href="css/buttons.telefonica.min.css">
-    <link rel="stylesheet" href="../icons/icons.css">
+    <link  rel="stylesheet" href="css/buttons.css">
+    <link id="themeFile" rel="stylesheet" href="../theme-telefonica/css/telefonica.components.min.css">
 
     <style>
-      body {
-        font-family: Helvetica, Arial;
-        font-size: 14px;
-      }
-      header {
+      header[data-columns] { padding-top: 30px; }
+      h1 { margin-top: 0; }
+      header > div { padding-top: 2px; }
+      code {
         display: block;
         overflow: hidden;
-      }
-      header * {
-        display: inline-block;
-        vertical-align: middle;
-      }
-      header span {
-        margin-left: 30px;
-        font-size: 12px;
       }
       style {
         display: block;
         white-space: pre;
-        margin-left: -65px;
+        color: #0086B3;
+        border: 1px solid #cfcece;
+        background: #f2f2f2;
+        margin: 20px 0;
         line-height: 25px;
+        overflow-y: auto;
+        border-radius: 4px;
       }
     </style>
   </head>
+
   <body>
-    <header>
-      <h1>TEF buttons</h1>
-      <span>Change theme</span>
-      <select id="themeSelector">
-        <option value="telefonica">Telefónica</option>
-        <option value="movistar">Movistar</option>
-        <option value="o2">O2</option>
-        <option value="vivo">Vivo</option>
-      </select>
-    </header>
+    <div class="tef-wrapper">
+      <header data-columns="2" data-columns-xs="1">
+        <h1>Buttons</h1>
+        <div>
+          <label>Change theme</label>
+          <div class="tef-dropdown">
+            <select id="themeSelector">
+              <option value="telefonica">Telefónica</option>
+              <option value="movistar">Movistar</option>
+              <option value="o2">O2</option>
+              <option value="vivo">Vivo</option>
+            </select>
+          </div>
+        </div>
+      </header>
 
-    <h2>Default</h2>
-    <div>
-      <a class="tef-button small">a</a>
-      <button class="tef-button small">Small</button>
-      <a class="tef-button">a</a>
-      <button class="tef-button">Default</button>
-      <a class="tef-button large">a</a>
-      <button class="tef-button large">Large</button>
-    </div>
-    <code>
-      <style>
-        <button class="tef-button small">Small</button>
-        <button class="tef-button">Default</button>
-        <button class="tef-button large">Large</button>
-      </style>
-    </code>
+      <h2>Default</h2>
+      <div class="tef-row">
+        <a href="" class="tef-button small">Small anchor</a>
+        <button class="tef-button small">Small button</button>
+      </div>
+      <div class="tef-row">
+        <a href="" class="tef-button">Default anchor</a>
+        <button class="tef-button">Default button</button>
+      </div>
+      <div class="tef-row">
+        <a href="" class="tef-button large">Large anchor</a>
+        <button class="tef-button large">Large Button</button>
+      </div>
+      <code>
+        <style>
+      <button class="tef-button small">Small button</button>
+      <button class="tef-button">Default button</button>
+      <button class="tef-button large">Large button</button>
+        </style>
+      </code>
 
-    <h2>Positive</h2>
-    <div>
+      <h2>Positive</h2>
       <button class="tef-button positive small">Small</button>
       <button class="tef-button positive">Default</button>
       <button class="tef-button positive large">Large</button>
-    </div>
-    <code>
-      <style>
-        <button class="tef-button positive small">Small</button>
-        <button class="tef-button positive">Default</button>
-        <button class="tef-button positive large">Large</button>
-      </style>
-    </code>
+      <code>
+        <style>
+      <button class="tef-button positive small">Small</button>
+      <button class="tef-button positive">Default</button>
+      <button class="tef-button positive large">Large</button>
+        </style>
+      </code>
 
-    <h2>Negative</h2>
-    <div>
+      <h2>Negative</h2>
       <button class="tef-button negative small">Small</button>
       <button class="tef-button negative">Default</button>
       <button class="tef-button negative large">Large</button>
-    </div>
-    <code>
-      <style>
-        <button class="tef-button negative small">Small</button>
-        <button class="tef-button negative">Default</button>
-        <button class="tef-button negative large">Large</button>
-      </style>
-    </code>
+      <code>
+        <style>
+      <button class="tef-button negative small">Small</button>
+      <button class="tef-button negative">Default</button>
+      <button class="tef-button negative large">Large</button>
+        </style>
+      </code>
 
-    <h2>Subdued</h2>
-    <div>
+      <h2>Subdued</h2>
       <button class="tef-button subdued small">Small</button>
       <button class="tef-button subdued">Default</button>
       <button class="tef-button subdued large">Large</button>
-    </div>
-    <code>
-      <style>
-        <button class="tef-button subdued small">Small</button>
-        <button class="tef-button subdued">Default</button>
-        <button class="tef-button subdued large">Large</button>
-      </style>
-    </code>
+      <code>
+        <style>
+      <button class="tef-button subdued small">Small</button>
+      <button class="tef-button subdued">Default</button>
+      <button class="tef-button subdued large">Large</button>
+        </style>
+      </code>
 
-    <h2>Significant</h2>
+      <h2>Significant</h2>
       <button class="tef-button significant small">Small</button>
       <button class="tef-button significant">Default</button>
       <button class="tef-button significant large">Large</button>
-    </div>
-    <code>
-      <style>
-        <button class="tef-button significant small">Small</button>
-        <button class="tef-button significant">Default</button>
-        <button class="tef-button significant large">Large</button>
-      </style>
-    </code>
+      <code>
+        <style>
+      <button class="tef-button significant small">Small</button>
+      <button class="tef-button significant">Default</button>
+      <button class="tef-button significant large">Large</button>
+        </style>
+      </code>
 
-    <h2>Icons</h2>
-      <button class="tef-button small">
-        <i data-icon="plus"></i>
-      </button>
-      <button class="tef-button small">
-        <i data-icon="plus"></i>
-        <span>add</span>
-      </button>
-      <button class="tef-button small">
-        <span>add</span>
-        <i data-icon="plus"></i>
-      </button>
-      <button class="tef-button">
-        <i data-icon="plus"></i>
-      </button>
-      <button class="tef-button">
-        <i data-icon="plus"></i>
-        <span>add</span>
-      </button>
-      <button class="tef-button">
-        <span>add</span>
-        <i data-icon="plus"></i>
-      </button>
-      <button class="tef-button large">
-        <i data-icon="plus"></i>
-      </button>
-      <button class="tef-button large">
-        <i data-icon="plus"></i>
-        <span>add</span>
-      </button>
-      <button class="tef-button large">
-        <span>add</span>
-        <i data-icon="plus"></i>
-      </button>
-    </div>
-    <code>
-      <style>
+      <h2>Icons</h2>
+      <div class="tef-row">
         <button class="tef-button small">
           <i data-icon="plus"></i>
         </button>
@@ -165,29 +129,71 @@
           <span>add</span>
           <i data-icon="plus"></i>
         </button>
-      </style>
-    </code>
+      </div>
+      <div class="tef-row">
+        <button class="tef-button">
+          <i data-icon="plus"></i>
+        </button>
+        <button class="tef-button">
+          <i data-icon="plus"></i>
+          <span>add</span>
+        </button>
+        <button class="tef-button">
+          <span>add</span>
+          <i data-icon="plus"></i>
+        </button>
+      </div>
+      <div class="tef-row">
+        <button class="tef-button large">
+          <i data-icon="plus"></i>
+        </button>
+        <button class="tef-button large">
+          <i data-icon="plus"></i>
+          <span>add</span>
+        </button>
+        <button class="tef-button large">
+          <span>add</span>
+          <i data-icon="plus"></i>
+        </button>
+      </div>
+      <code>
+        <style>
+      <button class="tef-button small">
+        <i data-icon="plus"></i>
+      </button>
+      <button class="tef-button small">
+        <i data-icon="plus"></i>
+        <span>add</span>
+      </button>
+      <button class="tef-button small">
+        <span>add</span>
+        <i data-icon="plus"></i>
+      </button>
+        </style>
+      </code>
 
-    <h2>Disabled</h2>
+      <h2>Disabled</h2>
       <button class="tef-button disabled">Default</button>
       <button class="tef-button positive disabled">Positive</button>
       <button class="tef-button negative disabled">Negative</button>
       <button class="tef-button subdued disabled">Subdued</button>
       <button class="tef-button significant disabled">Significant</button>
+      <code>
+        <style>
+      <button class="tef-button disabled">Default</button>
+      or
+      <button class="tef-button" disabled>Default</button>
+        </style>
+      </code>
     </div>
-    <code>
-      <style>
-        <button class="tef-button disabled">Default</button>
-        or
-        <button class="tef-button" disabled>Default</button>
-      </style>
-    </code>
 
     <script>
       var theme = document.getElementById('themeSelector');
       theme.addEventListener('change', function() {
         var link = document.getElementById('themeFile');
-        link.href = 'css/buttons.' + theme.value + '.min.css';
+        link.href = '../theme-'
+          + theme.value + '/css/'
+          + theme.value + '.components.min.css';
       });
     </script>
   </body>

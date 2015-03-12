@@ -5,10 +5,8 @@ module.exports = function(grunt) {
     less: {
       development: {
         files: {
-          "css/buttons.telefonica.css": "less/buttons.less",
-          "css/buttons.movistar.css": "less/movistar.less",
-          "css/buttons.o2.css": "less/o2.less",
-          "css/buttons.vivo.css": "less/vivo.less"
+          "css/buttons.css": "less/buttons.less",
+          "css/tef-button.css": "less/tef-button.less"
         }
       },
       production: {
@@ -18,10 +16,7 @@ module.exports = function(grunt) {
           optimization: 2
         },
         files: {
-          "css/buttons.telefonica.min.css": "less/buttons.less",
-          "css/buttons.movistar.min.css": "less/movistar.less",
-          "css/buttons.o2.min.css": "less/o2.less",
-          "css/buttons.vivo.min.css": "less/vivo.less"
+          "css/buttons.min.css": "less/buttons.less"
         }
       }
     },
@@ -31,7 +26,8 @@ module.exports = function(grunt) {
         files: ['less/**/*.less'],
         tasks: ['less', 'autoprefixer'],
         options: {
-          nospawn: true
+          nospawn: true,
+          livereload: true
         }
       }
     },
@@ -44,7 +40,15 @@ module.exports = function(grunt) {
         src: 'css/*.css'
       },
     },
+
+    includes: {
+      files: {
+        cwd: 'templates/',
+        src: '**/*.html',
+        dest: ''
+      }
+    }
   });
 
-  grunt.registerTask('default', ['less','autoprefixer','watch']);
+  grunt.registerTask('default', ['less','includes','watch']);
 };
