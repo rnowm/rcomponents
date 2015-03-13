@@ -6,7 +6,7 @@
     <title>TEF components demo</title>
     <meta name="viewport" content="width=device-width">
     <link  rel="stylesheet" href="css/buttons.css">
-    <link id="themeFile" rel="stylesheet" href="../temp/css/components.telefonica.min.css">
+    <link id="themeFile" rel="stylesheet" href="../theme_telefonica/css/components.telefonica.min.css">
 
     <style>
       header[data-columns] { padding-top: 30px; }
@@ -191,9 +191,9 @@
       var theme = document.getElementById('themeSelector');
       theme.addEventListener('change', function() {
         var link = document.getElementById('themeFile');
-        link.href = '../theme-'
-          + theme.value + '/css/'
-          + theme.value + '.components.min.css';
+        link.href = '../theme_'
+          + theme.value + '/css/components.'
+          + theme.value + '.min.css';
       });
     </script>
   </body>
