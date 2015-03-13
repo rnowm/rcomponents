@@ -6,7 +6,7 @@ module.exports = function(grunt) {
       development: {
         files: {
           "css/buttons.css": "less/buttons.less",
-          "css/tef-button.css": "less/tef-button.less"
+          "css/tef.button.css": "less/tef.button.less"
         }
       },
       production: {
@@ -32,13 +32,17 @@ module.exports = function(grunt) {
       }
     },
 
+    // note: autoprefixer crashes when compiling web components
+    // variables, so tef.button si excluded.
+    // that means tef.button is not cross browser.
+    // minor issue as WC are not either ;)
     autoprefixer: {
       options: {
         browsers: ['last 5 versions']
       },
       dist: {
-        src: 'css/*.css'
-      },
+        src: 'css/buttons*.css'
+      }
     },
 
     includes: {
@@ -50,5 +54,5 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('default', ['less','includes','watch']);
+  grunt.registerTask('default', ['less','includes','autoprefixer','watch']);
 };
