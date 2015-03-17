@@ -26,19 +26,19 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-:host .tef-button::hover,
-:host .tef-button::focus {
+:host .tef-button:hover,
+:host .tef-button:focus {
   color: #fff;
   background-color: {{g.colorHover}};
   outline: none;
 }
-:host .tef-button::active,
+:host .tef-button:active,
 :host .tef-button.active {
   color: #fff;
   background-color: {{g.colorActive}};
 }
-:host .tef-button [data-icon]::before,
-:host .tef-button ::content [data-icon]::before {
+:host .tef-button [data-icon]:before,
+:host .tef-button ::content [data-icon]:before {
   position: relative;
   font-size: 24px;
   line-height: 0;
@@ -58,8 +58,8 @@
   font-size: 11px;
   padding: 8px;
 }
-:host .tef-button.small [data-icon]::before,
-:host .tef-button.small ::content [data-icon]::before {
+:host .tef-button.small [data-icon]:before,
+:host .tef-button.small ::content [data-icon]:before {
   font-size: 20px;
 }
 :host .tef-button.small span,
@@ -70,8 +70,8 @@
   font-size: 24px;
   padding: 8px 15px;
 }
-:host .tef-button.large [data-icon]::before,
-:host .tef-button.large ::content [data-icon]::before {
+:host .tef-button.large [data-icon]:before,
+:host .tef-button.large ::content [data-icon]:before {
   font-size: 32px;
 }
 :host .tef-button.large span,
@@ -81,41 +81,41 @@
 :host .tef-button.positive {
   background-color: {{g.positive}};
 }
-:host .tef-button.positive::hover,
-:host .tef-button.positive::focus {
+:host .tef-button.positive:hover,
+:host .tef-button.positive:focus {
   background-color: {{g.positiveHover}};
 }
-:host .tef-button.positive::active {
+:host .tef-button.positive:active {
   background-color: {{g.positiveActive}};
 }
 :host .tef-button.negative {
   background-color: {{g.negative}};
 }
-:host .tef-button.negative::hover,
-:host .tef-button.negative::focus {
+:host .tef-button.negative:hover,
+:host .tef-button.negative:focus {
   background-color: {{g.negativeHover}};
 }
-:host .tef-button.negative::active {
+:host .tef-button.negative:active {
   background-color: {{g.negativeActive}};
 }
 :host .tef-button.subdued {
   background-color: {{g.subdued}};
 }
-:host .tef-button.subdued::hover,
-:host .tef-button.subdued::focus {
+:host .tef-button.subdued:hover,
+:host .tef-button.subdued:focus {
   background-color: {{g.subduedHover}};
 }
-:host .tef-button.subdued::active {
+:host .tef-button.subdued:active {
   background-color: {{g.subduedActive}};
 }
 :host .tef-button.significant {
   background-color: {{g.significant}};
 }
-:host .tef-button.significant::hover,
-:host .tef-button.significant::focus {
+:host .tef-button.significant:hover,
+:host .tef-button.significant:focus {
   background-color: {{g.significantHover}};
 }
-:host .tef-button.significant::active {
+:host .tef-button.significant:active {
   background-color: {{g.significantActive}};
 }
 :host .tef-button[disabled],
