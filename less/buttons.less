@@ -60,14 +60,14 @@ button::-moz-focus-inner {
   .truncate();
 
   // states
-  &::hover,
-  &::focus {
+  &:hover,
+  &:focus {
     color: #fff;
     background-color: @colorHover;
     outline: none;
   }
 
-  &::active,
+  &:active,
   &.active {
     color: #fff;
     background-color: @colorActive;
@@ -75,7 +75,7 @@ button::-moz-focus-inner {
 
   // icons
   &, ::content {
-    [data-icon]::before {
+    [data-icon]:before {
       position: relative;
       font-size: 24px;
       line-height: 0;
@@ -93,7 +93,7 @@ button::-moz-focus-inner {
     padding: 8px;
 
     &, ::content {
-      [data-icon]::before { font-size: 20px; }
+      [data-icon]:before { font-size: 20px; }
       span { font-size: 11px; }
     }
   }
@@ -103,7 +103,7 @@ button::-moz-focus-inner {
     padding: 8px 15px;
 
     &, ::content {
-      [data-icon]::before { font-size: 32px; }
+      [data-icon]:before { font-size: 32px; }
       span { font-size: 24px; }
     }
   }
@@ -112,12 +112,12 @@ button::-moz-focus-inner {
   &.positive {
     background-color: @positive;
 
-    &::hover,
-    &::focus {
+    &:hover,
+    &:focus {
       background-color: @positiveHover;
     }
 
-    &::active {
+    &:active {
       background-color: @positiveActive;
     }
   }
@@ -125,12 +125,12 @@ button::-moz-focus-inner {
   &.negative {
     background-color: @negative;
 
-    &::hover,
-    &::focus {
+    &:hover,
+    &:focus {
       background-color: @negativeHover;
     }
 
-    &::active {
+    &:active {
       background-color: @negativeActive;
     }
   }
@@ -138,12 +138,12 @@ button::-moz-focus-inner {
   &.subdued {
     background-color: @subdued;
 
-    &::hover,
-    &::focus {
+    &:hover,
+    &:focus {
       background-color: @subduedHover;
     }
 
-    &::active {
+    &:active {
       background-color: @subduedActive;
     }
   }
@@ -151,12 +151,12 @@ button::-moz-focus-inner {
   &.significant {
     background-color: @significant;
 
-    &::hover,
-    &::focus {
+    &:hover,
+    &:focus {
       background-color: @significantHover;
     }
 
-    &::active {
+    &:active {
       background-color: @significantActive;
     }
   }
