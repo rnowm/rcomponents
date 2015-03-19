@@ -2,33 +2,6 @@ module.exports = function(grunt) {
   require('jit-grunt')(grunt);
 
   grunt.initConfig({
-    less: {
-      development: {
-        files: {
-          "css/buttons.css": "less/variables.less",
-          "css/tef.button.css": "less/tef.button.less"
-        }
-      },
-      production: {
-        options: {
-          compress: true,
-          yuicompress: true,
-          optimization: 2
-        },
-        files: {
-          "css/buttons.min.css": "less/variables.less"
-        }
-      }
-    },
-
-    includes: {
-      files: {
-        cwd: 'templates/',
-        src: '**/*.html',
-        dest: ''
-      }
-    },
-
     bump: {
       // upgrade release and push to master
       options : {
@@ -55,11 +28,6 @@ module.exports = function(grunt) {
       }
     }
   });
-
-  grunt.registerTask('default', [
-    'less',
-    'includes',
-  ]);
 
   grunt.registerTask('release', [
     'exec:add',
