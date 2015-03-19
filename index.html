@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>TEF components demo</title>
     <meta name="viewport" content="width=device-width">
-    <link  rel="stylesheet" href="css/buttons.css">
-    <link id="themeFile" rel="stylesheet" href="../theme_telefonica/css/components.telefonica.min.css">
+    <link id="themeFile" rel="stylesheet" href="../theme_telefonica/css/components.telefonica.css">
 
     <style>
       header[data-columns] { padding-top: 30px; }
@@ -36,7 +35,7 @@
         <h1>Buttons</h1>
         <div>
           <label>Change theme</label>
-          <div class="tef-dropdown">
+          <div class="tef-dropdown" data-icon="angle_down">
             <select id="themeSelector">
               <option value="telefonica">Telefónica</option>
               <option value="movistar">Movistar</option>
@@ -62,9 +61,8 @@
       </div>
       <code>
         <style>
-      <button class="tef-button small">Small button</button>
+      <a href="" class="tef-button">Default anchor</a>
       <button class="tef-button">Default button</button>
-      <button class="tef-button large">Large button</button>
         </style>
       </code>
 
@@ -193,7 +191,7 @@
         var link = document.getElementById('themeFile');
         link.href = '../theme_'
           + theme.value + '/css/components.'
-          + theme.value + '.min.css';
+          + theme.value + '.css';
       });
     </script>
   </body>

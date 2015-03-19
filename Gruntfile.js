@@ -5,7 +5,7 @@ module.exports = function(grunt) {
     less: {
       development: {
         files: {
-          "css/buttons.css": "less/buttons.less",
+          "css/buttons.css": "less/variables.less",
           "css/tef.button.css": "less/tef.button.less"
         }
       },
@@ -16,32 +16,8 @@ module.exports = function(grunt) {
           optimization: 2
         },
         files: {
-          "css/buttons.min.css": "less/buttons.less"
+          "css/buttons.min.css": "less/variables.less"
         }
-      }
-    },
-
-    watch: {
-      styles: {
-        files: ['less/**/*.less'],
-        tasks: ['less', 'autoprefixer'],
-        options: {
-          nospawn: true,
-          livereload: true
-        }
-      }
-    },
-
-    // note: autoprefixer crashes when compiling web components
-    // variables, so tef.button si excluded.
-    // that means tef.button is not cross browser.
-    // minor issue as WC are not either ;)
-    autoprefixer: {
-      options: {
-        browsers: ['last 5 versions']
-      },
-      dist: {
-        src: 'css/buttons*.css'
       }
     },
 
@@ -51,8 +27,43 @@ module.exports = function(grunt) {
         src: '**/*.html',
         dest: ''
       }
+    },
+
+    bump: {
+      // upgrade release and push to master
+      options : {
+        files: ['bower.json'],
+        commitFiles: ["-a"],
+        pushTo: 'origin'
+      }
+    },
+
+    exec: {
+      // add new files before commiting
+      add: {
+        command: 'git add .'
+      },
+
+      // push to gh-pages branch
+      pages: {
+        command: [
+          'git checkout gh-pages',
+          'git pull origin master',
+          'git push origin gh-pages',
+          'git checkout master'
+        ].join('&&')
+      }
     }
   });
 
-  grunt.registerTask('default', ['less','includes','autoprefixer','watch']);
+  grunt.registerTask('default', [
+    'less',
+    'includes',
+  ]);
+
+  grunt.registerTask('release', [
+    'exec:add',
+    'bump',
+    //'exec:pages'
+  ]);
 };

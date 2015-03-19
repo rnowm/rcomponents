@@ -2,34 +2,7 @@
 // TEF components - buttons
 //
 
-@import 'mixins.less';
-
-// Vanilla variables
-@color: #111;
-@colorHover: #333;
-@colorActive: #555;
-@positive: #222;
-@positiveHover: #444;
-@positiveActive: #666;
-@negative: #333;
-@negativeHover: #555;
-@negativeActive: #777;
-@subdued: #444;
-@subduedHover: #666;
-@subduedActive: #888;
-@significant: #555;
-@significantHover: #777;
-@significantActive: #999;
-@neutral: #666;
-@neutralHover: #888;
-@neutralActive: #aaa;
-
-@grey1: #f2f2f2;
-@grey2: #cfcece;
-@grey3: #b3b5b7;
-@grey4: #aeadad;
-@grey5: #686868;
-@grey6: #31313d;
+@import "mixins.less";
 
 // Reset
 button::-moz-focus-inner {
@@ -44,14 +17,14 @@ button::-moz-focus-inner {
   max-width: 200px;
   background-image: none;
   background-color: @color;
-  color: white;
+  color: @text;
   font-size: 15px;
   line-height: normal;
   font-weight: normal;
   text-align: center;
-  border: none;
+  border: 1px solid @border;
   border-radius: 4px;
-  padding: 8px 9px;
+  padding: 7px 8px;
   cursor: pointer;
   user-select: none;
   text-decoration: none;
@@ -62,15 +35,17 @@ button::-moz-focus-inner {
   // states
   &:hover,
   &:focus {
-    color: #fff;
+    color: @textHover;
     background-color: @colorHover;
+    border-color: @borderHover;
     outline: none;
   }
 
   &:active,
   &.active {
-    color: #fff;
+    color: @textActive;
     background-color: @colorActive;
+    border-color: @borderActive;
   }
 
   // icons
@@ -79,7 +54,7 @@ button::-moz-focus-inner {
       position: relative;
       font-size: 24px;
       line-height: 0;
-      top: 5px;
+      top: 3px;
     }
 
     [data-icon] + span,
@@ -90,7 +65,7 @@ button::-moz-focus-inner {
   // sizes
   &.small {
     font-size: 11px;
-    padding: 8px;
+    padding: 7px;
 
     &, ::content {
       [data-icon]:before { font-size: 20px; }
@@ -100,7 +75,7 @@ button::-moz-focus-inner {
 
   &.large {
     font-size: 24px;
-    padding: 8px 15px;
+    padding: 7px 14px;
 
     &, ::content {
       [data-icon]:before { font-size: 32px; }
@@ -108,58 +83,45 @@ button::-moz-focus-inner {
     }
   }
 
-  // colors
-  &.positive {
-    background-color: @positive;
+  // colors loop
+  @colors: "positive", "negative", "subdued", "significant", "neutral";
 
-    &:hover,
-    &:focus {
-      background-color: @positiveHover;
-    }
+  .colors-loop {
+    .-(@i: length(@colors)) when (@i > 0) {
+      @name: e(extract(@colors, @i));
+      @nameText: e("@{name}Text");
+      @nameBorder: e("@{name}Border");
+      @nameHover: e("@{name}Hover");
+      @nameTextHover: e("@{name}TextHover");
+      @nameBorderHover: e("@{name}BorderHover");
+      @nameActive: e("@{name}Active");
+      @nameTextActive: e("@{name}TextActive");
+      @nameBorderActive: e("@{name}BorderActive");
 
-    &:active {
-      background-color: @positiveActive;
-    }
+      &.@{name} {
+        background-color: @@name;
+        color: @@nameText;
+        border-color: @@nameBorder;
+
+        &:hover,
+        &:focus {
+          background-color: @@nameHover;
+          color: @@nameTextHover;
+          border-color: @@nameBorderHover;
+        }
+
+        &:active,
+        &.active {
+          background-color: @@nameActive;
+          color: @@nameTextActive;
+          border-color: @@nameBorderActive;
+        }
+      }
+      .-((@i - 1));
+    } .-;
   }
 
-  &.negative {
-    background-color: @negative;
-
-    &:hover,
-    &:focus {
-      background-color: @negativeHover;
-    }
-
-    &:active {
-      background-color: @negativeActive;
-    }
-  }
-
-  &.subdued {
-    background-color: @subdued;
-
-    &:hover,
-    &:focus {
-      background-color: @subduedHover;
-    }
-
-    &:active {
-      background-color: @subduedActive;
-    }
-  }
-
-  &.significant {
-    background-color: @significant;
-
-    &:hover,
-    &:focus {
-      background-color: @significantHover;
-    }
-
-    &:active {
-      background-color: @significantActive;
-    }
-  }
+  .colors-loop();
 
   // disabled
   &[disabled],
@@ -168,3 +130,4 @@ button::-moz-focus-inner {
     pointer-events: none;
   }
 }
+
