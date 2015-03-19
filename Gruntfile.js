@@ -64,6 +64,6 @@ module.exports = function(grunt) {
   grunt.registerTask('release', [
     'exec:add',
     'bump',
-    //'exec:pages'
+    'exec:pages'
   ]);
 };
