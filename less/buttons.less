@@ -52,13 +52,13 @@ button::-moz-focus-inner {
   &, ::content {
     [data-icon]:before {
       position: relative;
-      font-size: 24px;
+      font-size: 23px;
       line-height: 0;
-      top: 3px;
+      top: 4px;
     }
 
     [data-icon] + span,
-    span + [data-icon] { margin-left: 6px; }
+    span + [data-icon] { margin-left: 5px; }
     span { font-size: 15px; }
   }
 
@@ -68,7 +68,10 @@ button::-moz-focus-inner {
     padding: 7px;
 
     &, ::content {
-      [data-icon]:before { font-size: 20px; }
+      [data-icon]:before {
+        font-size: 18px;
+        top: 3px;
+      }
       span { font-size: 11px; }
     }
   }
@@ -78,7 +81,10 @@ button::-moz-focus-inner {
     padding: 7px 14px;
 
     &, ::content {
-      [data-icon]:before { font-size: 32px; }
+      [data-icon]:before {
+        font-size: 32px;
+        top: 5px;
+      }
       span { font-size: 24px; }
     }
   }
