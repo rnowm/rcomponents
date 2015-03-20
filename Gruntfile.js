@@ -25,12 +25,36 @@ module.exports = function(grunt) {
           'git push origin gh-pages',
           'git checkout master'
         ].join('&&')
+      },
+
+      // adds prompted commit message
+      message: {
+        command: function() {
+          var message = grunt.config('gitmessage');
+          return "git commit -am '" + message + "'";
+        }
+      }
+    },
+
+    prompt: {
+      commit: {
+        options: {
+          questions: [
+            {
+              config: 'gitmessage',
+              type: 'input',
+              message: 'Commit Message'
+            }
+          ]
+        }
       }
     }
   });
 
   grunt.registerTask('release', [
     'exec:add',
+    'prompt',
+    'exec:message',
     'bump',
     'exec:pages'
   ]);
