@@ -1,11 +1,11 @@
 {
-  "name": "buttons",
+  "name": "modals",
   "version": "0.2.10",
-  "homepage": "https://github.com/tef-components/buttons",
+  "homepage": "https://github.com/tef-components/modals",
   "authors": [
     "the TEF components team"
   ],
-  "description": "TEF components - buttons",
+  "description": "TEF components - modals",
   "main": "index.html",
   "license": "MIT",
   "ignore": [
@@ -18,6 +18,6 @@
     "bower_components"
   ],
   "dependencies": {
-    "icons": "tef-components/icons"
+    "buttons": "tef-components/buttons"
   }
 }
