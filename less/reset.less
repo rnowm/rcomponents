@@ -1,6 +1,10 @@
 //
 // Reset default browser styles
 //
+body {
+  background: white;
+  height: 100%;
+}
 
 button::-moz-focus-inner {
   border: none;
@@ -12,4 +16,11 @@ button {
   &:focus {
     outline: none;
   }
+}
+
+// disabled
+[disabled],
+.disabled {
+  opacity: 0.4;
+  pointer-events: none;
 }
