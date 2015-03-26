@@ -1,11 +1,11 @@
 {
-  "name": "modals",
+  "name": "utils",
   "version": "0.2.14",
-  "homepage": "https://github.com/tef-components/modals",
+  "homepage": "https://github.com/tef-components/utils",
   "authors": [
     "the TEF components team"
   ],
-  "description": "TEF components - modals",
+  "description": "TEF components - utils",
   "main": "index.html",
   "license": "MIT",
   "ignore": [
