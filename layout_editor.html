@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>TEF components demo</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="../theme_telefonica/css/components.telefonica.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  </head>
+  <body>
+    <div class="tef-wrapper tef-content">
+      <header>
+        <h1>Layout Editor</h1>
+      </header>
+
+      <section>
+        <div id="main-grid"></div>
+      </section>
+
+       <div id="add-columns-modal" class="tef-modal">
+        <div class="tef-dialog">
+          <header>Layout Editor</header>
+          <p>Please select the structure of your main container.</p>
+          <br>
+          <label>Number of columns</label>
+          <div class="tef-dropdown" data-icon="angle_down">
+            <select id="add-columns-number">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option selected value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+          </div>
+          <br><br>
+          <label>Will your columns have gutter?</label>
+          <label class="tef-radio">
+            <input type="radio" name="add-columns-gutter" value="yes">
+            <span>Yes</span>
+          </label>
+          <label class="tef-radio">
+            <input type="radio" name="add-columns-gutter" value="no" checked>
+            <span>No</span>
+          </label>
+
+          <footer>
+            <button class="tef-button" id="add-columns-btn">Ok</button>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="js/layout.js"></script>
+</html>

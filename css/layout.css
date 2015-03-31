@@ -1,0 +1,12 @@
+[data-columns] > * {
+  text-align: center;
+  background: rgba(0,0,0,0.1);
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+span + .tef-button.small {
+  margin-left: 10px;
+}
