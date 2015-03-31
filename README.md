@@ -1,5 +1,5 @@
-# TEF utils
+# TEF tool
 
-Set of mixins and helper classes to help you build your components.
+Set of tools to help you develop your components.
 
-This [demo](http://tef-components.github.io/utils/index.html) will help you testing breakpoints in all themes.
+This [demo](http://tef-components.github.io/tools/index.html) will help you testing your breakpoints in all themes.

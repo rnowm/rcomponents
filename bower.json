@@ -1,11 +1,11 @@
 {
-  "name": "utils",
+  "name": "tools",
   "version": "0.2.16",
-  "homepage": "https://github.com/tef-components/utils",
+  "homepage": "https://github.com/tef-components/tools",
   "authors": [
     "the TEF components team"
   ],
-  "description": "TEF components - utils",
+  "description": "TEF components - tools",
   "main": "index.html",
   "license": "MIT",
   "ignore": [
