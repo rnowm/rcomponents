@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title id="title">Breakpoint inspector</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bp-inspector.css" media="all">
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+</head>
+<body>
+  <div id="header-wrapper">
+    <header role="banner">
+      <h1>Breakpoint inspector</h1>
+      <nav id="breakpoints"></nav>
+      <form id="bp-form">
+        <input id="bp-width" type="text" pattern="[0-9]*"> px
+      </form>
+    </header>
+  </div>
+  <div id="main-wrapper">
+    <div id="iframe-wrapper">
+      <iframe id="iframe" src="demo-site.html"></iframe>
+    </div>
+  </div>
+  <script src="js/jwerty.js"></script>
+  <script>
+    var breakpoints = { 'SM' : '768',
+                        'MD' : '992',
+                        'LG' : '1200' }
+  </script>
+  <script src="js/bp-inspector.js"></script>
+</body>
+</html>
