@@ -1,0 +1,74 @@
+//
+// R-Components - sidebars
+//
+
+.rc-sidebar {
+  position: relative;
+  color: #333;
+  background-color: #c5ced3;
+
+  &.absolute {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+
+    // list
+    .rc-list {
+      overflow: auto;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  header {
+    font-size: 10px;
+    line-height: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 4px 15px;
+    background-color: #c5ced3;
+  }
+
+  .rc-tabs ~ .rc-list { top: 50px; }
+  .rc-tabs ~ .rc-list { bottom: 40px; }
+
+  // input
+  .rc-input.block + [data-icon] {
+    top: 18px;
+    right: 15px;
+  }
+
+  // toolbar
+  .rc-toolbar {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #beccd4;
+    border-top: 1px solid #e5eaec;
+    color: #364145;
+    padding: 0;
+
+    li {
+      padding: 0 5px;
+      border-color: #e5eaec;
+      &:first-child { border-left: none; }
+    }
+
+    a {
+      color: #364145;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: #d1d9dd;
+      }
+    }
+  }
+}

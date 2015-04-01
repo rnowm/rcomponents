@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>TEF components demo</title>
+    <title>R-Components demo</title>
     <meta name="viewport" content="width=device-width">
-    <link id="themeFile" rel="stylesheet" href="../theme_telefonica/css/components.telefonica.css">
+    <link rel="stylesheet" href="css/rcomponents.css">
 
     <style>
       header[data-columns] { padding-top: 30px; }
@@ -28,733 +28,724 @@
       }.demo {
         padding: 55px 0;
       }
-      .demo .tef-button {
+      .demo .rc-button {
         padding: 20px 10px;
       }
     </style>
   </head>
 
   <body>
-    <div class="tef-wrapper tef-content">
-      <header data-columns="2" data-columns-xs="1">
-        <h1>Components</h1>
-        <div>
-          <label>Change theme</label>
-          <div class="tef-dropdown" data-icon="angle_down">
-            <select id="themeSelector">
-              <option value="telefonica">Telefónica</option>
-              <option value="movistar">Movistar</option>
-              <option value="o2">O2</option>
-              <option value="vivo">Vivo</option>
+    <div class="rc-wrapper">
+      <header class="rc-header">
+        <nav>
+          <button id="show-menu-btn" onclick="showMenu()" class="rc-menu" data-icon="menu"></button>
+          <button id="hide-menu-btn" onclick="hideMenu()" class="rc-close" data-icon="close"></button>
+          <ul id="menu" onclick="hideMenu()">
+            <li><span>Hello George!</span><i data-icon="user"></i></li>
+            <li><a href=""><span>Help</span><i data-icon="help_circle"></i></a></li>
+            <li><a href=""><span>Exit</span><i data-icon="close_circle"></i></a></li>
+          </ul>
+        </nav>
+        <h1><a href="/">R-Components</a></h1>
+        <p>Another UI kit</p>
+      </header>
+
+      <div class="rc-content">
+        <h2>Buttons</h2>
+        <div class="rc-row">
+          <button class="rc-button small">Small</button>
+          <button class="rc-button positive small">Small Positive</button>
+          <button class="rc-button negative small">Small Negative</button>
+          <button class="rc-button subdued small">Small Subdued</button>
+          <button class="rc-button significant small">Small Significant</button>
+        </div>
+        <div class="rc-row">
+          <button class="rc-button">Default</button>
+          <button class="rc-button positive">Positive</button>
+          <button class="rc-button negative">Negative</button>
+          <button class="rc-button subdued">Subdued</button>
+          <button class="rc-button significant">Significant</button>
+        </div>
+        <div class="rc-row">
+          <button class="rc-button large">Large</button>
+          <button class="rc-button positive large">Large Positive</button>
+          <button class="rc-button negative large">Large Negative</button>
+          <button class="rc-button subdued large">Large Subdued</button>
+          <button class="rc-button significant large">Large Significant</button>
+        </div>
+        <div class="rc-row">
+          <button class="rc-button block small">Small Block</button>
+        </div>
+        <div class="rc-row">
+          <button class="rc-button block">Block</button>
+        </div>
+        <div class="rc-row">
+          <button class="rc-button block large">Large Block</button>
+        </div>
+        <div class="rc-row">
+          <button class="rc-button small">
+            Add
+          </button>
+          <button class="rc-button small">
+            <i data-icon="plus"></i>
+          </button>
+          <button class="rc-button small">
+            <i data-icon="plus"></i>
+            <span>Add</span>
+          </button>
+          <button class="rc-button small">
+            <span>Add</span>
+            <i data-icon="plus"></i>
+          </button>
+        </div>
+        <div class="rc-row">
+          <button class="rc-button">
+            Add
+          </button>
+          <button class="rc-button">
+            <i data-icon="plus"></i>
+          </button>
+          <button class="rc-button">
+            <i data-icon="plus"></i>
+            <span>Add</span>
+          </button>
+          <button class="rc-button">
+            <span>Add</span>
+            <i data-icon="plus"></i>
+          </button>
+        </div>
+        <div class="rc-row">
+          <button class="rc-button large">
+            Add
+          </button>
+          <button class="rc-button large">
+            <i data-icon="plus"></i>
+          </button>
+          <button class="rc-button large">
+            <i data-icon="plus"></i>
+            <span>Add</span>
+          </button>
+          <button class="rc-button large">
+            <span>Add</span>
+            <i data-icon="plus"></i>
+          </button>
+        </div>
+        <div class="rc-row">
+          <button class="rc-button" disabled>Default</button>
+          <button class="rc-button positive" disabled>Positive</button>
+          <button class="rc-button negative" disabled>Negative</button>
+          <button class="rc-button subdued" disabled>Subdued</button>
+          <button class="rc-button significant" disabled>Significant</button>
+        </div>
+        <div class="rc-group">
+          <button class="rc-button">Default</button>
+          <button class="rc-button positive">Positive</button>
+          <button class="rc-button negative">Negative</button>
+          <button class="rc-button subdued">Subdued</button>
+          <button class="rc-button significant">Significant</button>
+        </div>
+        <div class="rc-group disabled">
+          <button class="rc-button">Default</button>
+          <button class="rc-button positive">Positive</button>
+          <button class="rc-button negative">Negative</button>
+          <button class="rc-button subdued">Subdued</button>
+          <button class="rc-button significant">Significant</button>
+        </div>
+
+        <h2>Inputs</h2>
+        <div class="rc-row">
+          <label class="rc-inline">Label</label>
+          <input type="text" class="rc-input small" value="input">
+          <input type="text" class="rc-input" value="input">
+          <input type="text" class="rc-input large" value="input">
+        </div>
+        <div class="rc-row">
+          <input class="rc-input icon small" type="text" value="Search">
+          <i data-icon="search"></i>
+          <input class="rc-input icon" type="text" value="Search">
+          <i data-icon="search"></i>
+          <input class="rc-input icon large" type="text" value="Search">
+          <i data-icon="search"></i>
+        </div>
+        <div class="rc-row">
+          <label>Label</label>
+          <input type="text" class="rc-input small block" value="input">
+        </div>
+        <div class="rc-row">
+          <input type="text" class="rc-input block" value="input">
+        </div>
+        <div class="rc-row">
+          <input class="rc-input block icon" type="text" value="Search">
+          <i data-icon="search"></i>
+        </div>
+        <div class="rc-row">
+          <input type="text" class="rc-input large block" value="input">
+        </div>
+        <div class="rc-row rc-ok">
+          <input class="rc-input" type="text" value="text">
+          <div class="rc-message">
+            This field is valid
+          </div>
+        </div>
+        <div class="rc-row rc-ok">
+          <input class="rc-input block" type="text" value="text">
+          <div class="rc-message">
+            This field is valid
+          </div>
+        </div>
+        <div class="rc-row rc-error">
+          <input class="rc-input" type="text" value="text">
+          <div class="rc-message">
+            This field is invalid
+          </div>
+        </div>
+        <div class="rc-row rc-error">
+          <input class="rc-input block" type="text" value="text">
+          <div class="rc-message">
+            This field is invalid
+          </div>
+        </div>
+        <div class="rc-group">
+          <a href="" class="rc-button small">Anchor</a>
+          <input type="text" class="rc-input small" placeholder="Enter user name">
+          <button class="rc-button small positive">Button</button>
+        </div>
+        <div class="rc-group">
+          <a href="" class="rc-button">Anchor</a>
+          <input type="text" class="rc-input" placeholder="Enter user name">
+          <button class="rc-button positive">Button</button>
+        </div>
+        <div class="rc-group">
+          <a href="" class="rc-button large">Anchor</a>
+          <input type="text" class="rc-input large" placeholder="Enter user name">
+          <button class="rc-button large">Button</button>
+        </div>
+        <div class="rc-group">
+          <button class="rc-button small">
+            <i data-icon="minus"></i>
+          </button>
+          <input type="text" class="rc-input small" placeholder="Enter user name">
+          <button class="rc-button small">
+            <i data-icon="plus"></i>
+          </button>
+        </div>
+        <div class="rc-group">
+          <button class="rc-button">
+            <i data-icon="minus"></i>
+          </button>
+          <input type="text" class="rc-input" placeholder="Enter user name">
+          <button class="rc-button">
+            <i data-icon="plus"></i>
+          </button>
+        </div>
+        <div class="rc-group">
+          <button class="rc-button large">
+            <i data-icon="minus"></i>
+          </button>
+          <input type="text" class="rc-input large" placeholder="Enter user name">
+          <button class="rc-button large">
+            <i data-icon="plus"></i>
+          </button>
+        </div>
+
+        <h2>Textareas</h2>
+
+        <div class="rc-row rc-ok">
+          <textarea class="rc-input small">Text</textarea>
+          <textarea class="rc-input">Text</textarea>
+          <textarea class="rc-input large">Text</textarea>
+        </div>
+        <div class="rc-row rc-ok">
+          <textarea class="rc-input">Text</textarea>
+          <div class="rc-message">
+            This field is valid
+          </div>
+        </div>
+        <div class="rc-row rc-ok">
+          <textarea class="rc-input block">Text</textarea>
+          <div class="rc-message">
+            This field is valid
+          </div>
+        </div>
+        <div class="rc-row rc-error">
+          <textarea class="rc-input">Text</textarea>
+          <div class="rc-message">
+            This field is invalid
+          </div>
+        </div>
+        <div class="rc-row rc-error">
+          <textarea class="rc-input block">Text</textarea>
+          <div class="rc-message">
+            This field is invalid
+          </div>
+        </div>
+
+        <h2>Dropdowns</h2>
+        <div class="rc-row">
+          <div class="rc-dropdown" data-icon="angle_down">
+            <select>
+              <option>Option 1</option>
+              <option>Option 2</option>
+              <option>Option 3</option>
+            </select>
+          </div>
+          <div class="rc-dropdown active" data-icon="angle_down">
+            <span>Option 1</span>
+            <ul>
+              <li>Option 1</li>
+              <li>Option 2</li>
+              <li>Option 3</li>
+            </ul>
+          </div>
+          <div class="rc-dropdown active up" data-icon="angle_up">
+            <span>Option 1</span>
+            <ul>
+              <li>Option 1</li>
+              <li>Option 2</li>
+              <li>Option 3</li>
+            </ul>
+          </div>
+        </div>
+        <br><br><br><br><br>
+        <div class="rc-row">
+          <div class="rc-dropdown small" data-icon="angle_down">
+            <select>
+              <option>Option 1</option>
+              <option>Option 2</option>
+              <option>Option 3</option>
+            </select>
+          </div>
+          <div class="rc-dropdown" data-icon="angle_down">
+            <select>
+              <option>Option 1</option>
+              <option>Option 2</option>
+              <option>Option 3</option>
+            </select>
+          </div>
+          <div class="rc-dropdown large" data-icon="angle_down">
+            <select>
+              <option>Option 1</option>
+              <option>Option 2</option>
+              <option>Option 3</option>
             </select>
           </div>
         </div>
-      </header>
+        <div class="rc-row">
+          <div class="rc-dropdown small block" data-icon="angle_down">
+            <select>
+              <option>Option 1</option>
+              <option>Option 2</option>
+              <option>Option 3</option>
+            </select>
+          </div>
+        </div>
+        <div class="rc-row">
+          <div class="rc-dropdown block" data-icon="angle_down">
+            <select>
+              <option>Option 1</option>
+              <option>Option 2</option>
+              <option>Option 3</option>
+            </select>
+          </div>
+        </div>
+        <div class="rc-row">
+          <div class="rc-dropdown large block" data-icon="angle_down">
+            <select>
+              <option>Option 1</option>
+              <option>Option 2</option>
+              <option>Option 3</option>
+            </select>
+          </div>
+        </div>
 
-      <h2>Buttons</h2>
-      <div class="tef-row">
-        <button class="tef-button small">Small</button>
-        <button class="tef-button positive small">Small Positive</button>
-        <button class="tef-button negative small">Small Negative</button>
-        <button class="tef-button subdued small">Small Subdued</button>
-        <button class="tef-button significant small">Small Significant</button>
-      </div>
-      <div class="tef-row">
-        <button class="tef-button">Default</button>
-        <button class="tef-button positive">Positive</button>
-        <button class="tef-button negative">Negative</button>
-        <button class="tef-button subdued">Subdued</button>
-        <button class="tef-button significant">Significant</button>
-      </div>
-      <div class="tef-row">
-        <button class="tef-button large">Large</button>
-        <button class="tef-button positive large">Large Positive</button>
-        <button class="tef-button negative large">Large Negative</button>
-        <button class="tef-button subdued large">Large Subdued</button>
-        <button class="tef-button significant large">Large Significant</button>
-      </div>
-      <div class="tef-row">
-        <button class="tef-button block small">Small Block</button>
-      </div>
-      <div class="tef-row">
-        <button class="tef-button block">Block</button>
-      </div>
-      <div class="tef-row">
-        <button class="tef-button block large">Large Block</button>
-      </div>
-      <div class="tef-row">
-        <button class="tef-button small">
-          Add
-        </button>
-        <button class="tef-button small">
-          <i data-icon="plus"></i>
-        </button>
-        <button class="tef-button small">
-          <i data-icon="plus"></i>
-          <span>Add</span>
-        </button>
-        <button class="tef-button small">
-          <span>Add</span>
-          <i data-icon="plus"></i>
-        </button>
-      </div>
-      <div class="tef-row">
-        <button class="tef-button">
-          Add
-        </button>
-        <button class="tef-button">
-          <i data-icon="plus"></i>
-        </button>
-        <button class="tef-button">
-          <i data-icon="plus"></i>
-          <span>Add</span>
-        </button>
-        <button class="tef-button">
-          <span>Add</span>
-          <i data-icon="plus"></i>
-        </button>
-      </div>
-      <div class="tef-row">
-        <button class="tef-button large">
-          Add
-        </button>
-        <button class="tef-button large">
-          <i data-icon="plus"></i>
-        </button>
-        <button class="tef-button large">
-          <i data-icon="plus"></i>
-          <span>Add</span>
-        </button>
-        <button class="tef-button large">
-          <span>Add</span>
-          <i data-icon="plus"></i>
-        </button>
-      </div>
-      <div class="tef-row">
-        <button class="tef-button" disabled>Default</button>
-        <button class="tef-button positive" disabled>Positive</button>
-        <button class="tef-button negative" disabled>Negative</button>
-        <button class="tef-button subdued" disabled>Subdued</button>
-        <button class="tef-button significant" disabled>Significant</button>
-      </div>
-      <div class="tef-group">
-        <button class="tef-button">Default</button>
-        <button class="tef-button positive">Positive</button>
-        <button class="tef-button negative">Negative</button>
-        <button class="tef-button subdued">Subdued</button>
-        <button class="tef-button significant">Significant</button>
-      </div>
-      <div class="tef-group disabled">
-        <button class="tef-button">Default</button>
-        <button class="tef-button positive">Positive</button>
-        <button class="tef-button negative">Negative</button>
-        <button class="tef-button subdued">Subdued</button>
-        <button class="tef-button significant">Significant</button>
-      </div>
+        <h2>Radio buttons</h2>
+        <div class="tef row">
+          <label class="rc-radio">
+            <input checked="" type="radio" name="radio1">
+            <span>Radio text 1</span>
+          </label>
+          <label class="rc-radio">
+            <input type="radio" name="radio1">
+            <span>Radio text 2</span>
+          </label>
+        </div>
+        <div class="tef row">
+          <label class="rc-radio right">
+            <input checked="" type="radio" name="radio2">
+            <span>Radio text 1</span>
+          </label>
+          <label class="rc-radio right">
+            <input type="radio" name="radio2">
+            <span>Radio text 2</span>
+          </label>
+        </div>
+        <div class="tef row">
+          <label class="rc-radio block">
+            <input checked="" type="radio" name="radio3">
+            <span>Radio text 1</span>
+          </label>
+          <label class="rc-radio block block">
+            <input type="radio" name="radio3">
+            <span>Radio text 2</span>
+          </label>
+        <div class="tef row">
+          <label class="rc-radio block right">
+            <input checked="" type="radio" name="radio4">
+            <span>Radio text 1</span>
+          </label>
+          <label class="rc-radio block right">
+            <input type="radio" name="radio4">
+            <span>Radio text 2</span>
+          </label>
+        </div>
+        <div class="tef row">
+          <label class="rc-radio disabled">
+            <input checked="" type="radio" name="radio5">
+            <span>Radio text 1</span>
+          </label>
+          <label class="rc-radio" disabled>
+            <input type="radio" name="radio5">
+            <span>Radio text 2</span>
+          </label>
+        </div>
 
-      <h2>Inputs</h2>
-      <div class="tef-row">
-        <label class="tef-inline">Label</label>
-        <input type="text" class="tef-input small" value="input">
-        <input type="text" class="tef-input" value="input">
-        <input type="text" class="tef-input large" value="input">
-      </div>
-      <div class="tef-row">
-        <input class="tef-input icon small" type="text" value="Search">
-        <i data-icon="search"></i>
-        <input class="tef-input icon" type="text" value="Search">
-        <i data-icon="search"></i>
-        <input class="tef-input icon large" type="text" value="Search">
-        <i data-icon="search"></i>
-      </div>
-      <div class="tef-row">
-        <label>Label</label>
-        <input type="text" class="tef-input small block" value="input">
-      </div>
-      <div class="tef-row">
-        <input type="text" class="tef-input block" value="input">
-      </div>
-      <div class="tef-row">
-        <input class="tef-input block icon" type="text" value="Search">
-        <i data-icon="search"></i>
-      </div>
-      <div class="tef-row">
-        <input type="text" class="tef-input large block" value="input">
-      </div>
-      <div class="tef-row tef-ok">
-        <input class="tef-input" type="text" value="text">
-        <div class="tef-message">
-          This field is valid
+        <h2>Checkboxes</h2>
+        <div class="tef row">
+          <label class="rc-checkbox">
+            <input checked="" type="checkbox">
+            <span data-icon="check">Checkbox text 1</span>
+          </label>
+          <label class="rc-checkbox">
+            <input type="checkbox">
+            <span data-icon="check">Checkbox text 2</span>
+          </label>
         </div>
-      </div>
-      <div class="tef-row tef-ok">
-        <input class="tef-input block" type="text" value="text">
-        <div class="tef-message">
-          This field is valid
+        <div class="tef row">
+          <label class="rc-checkbox right">
+            <input checked="" type="checkbox">
+            <span data-icon="check">Checkbox text 1</span>
+          </label>
+          <label class="rc-checkbox right">
+            <input type="checkbox">
+            <span data-icon="check">Checkbox text 2</span>
+          </label>
         </div>
-      </div>
-      <div class="tef-row tef-error">
-        <input class="tef-input" type="text" value="text">
-        <div class="tef-message">
-          This field is invalid
+        <div class="tef row">
+          <label class="rc-checkbox block">
+            <input checked="" type="checkbox">
+            <span data-icon="check">Checkbox text 1</span>
+          </label>
+          <label class="rc-checkbox block block">
+            <input type="checkbox">
+            <span data-icon="check">Checkbox text 2</span>
+          </label>
         </div>
-      </div>
-      <div class="tef-row tef-error">
-        <input class="tef-input block" type="text" value="text">
-        <div class="tef-message">
-          This field is invalid
+        <div class="tef row">
+          <label class="rc-checkbox block right">
+            <input checked="" type="checkbox">
+            <span data-icon="check">Checkbox text 1</span>
+          </label>
+          <label class="rc-checkbox block right">
+            <input type="checkbox">
+            <span data-icon="check">Checkbox text 2</span>
+          </label>
         </div>
-      </div>
-      <div class="tef-group">
-        <a href="" class="tef-button small">Anchor</a>
-        <input type="text" class="tef-input small" placeholder="Enter user name">
-        <button class="tef-button small positive">Button</button>
-      </div>
-      <div class="tef-group">
-        <a href="" class="tef-button">Anchor</a>
-        <input type="text" class="tef-input" placeholder="Enter user name">
-        <button class="tef-button positive">Button</button>
-      </div>
-      <div class="tef-group">
-        <a href="" class="tef-button large">Anchor</a>
-        <input type="text" class="tef-input large" placeholder="Enter user name">
-        <button class="tef-button large">Button</button>
-      </div>
-      <div class="tef-group">
-        <button class="tef-button small">
-          <i data-icon="minus"></i>
-        </button>
-        <input type="text" class="tef-input small" placeholder="Enter user name">
-        <button class="tef-button small">
-          <i data-icon="plus"></i>
-        </button>
-      </div>
-      <div class="tef-group">
-        <button class="tef-button">
-          <i data-icon="minus"></i>
-        </button>
-        <input type="text" class="tef-input" placeholder="Enter user name">
-        <button class="tef-button">
-          <i data-icon="plus"></i>
-        </button>
-      </div>
-      <div class="tef-group">
-        <button class="tef-button large">
-          <i data-icon="minus"></i>
-        </button>
-        <input type="text" class="tef-input large" placeholder="Enter user name">
-        <button class="tef-button large">
-          <i data-icon="plus"></i>
-        </button>
-      </div>
+        <div class="tef row">
+          <label class="rc-checkbox disabled">
+            <input checked="" type="checkbox">
+            <span data-icon="check">Checkbox text 1</span>
+          </label>
+          <label class="rc-checkbox" disabled>
+            <input type="checkbox">
+            <span data-icon="check">Checkbox text 2</span>
+          </label>
+        </div>
 
-      <h2>Textareas</h2>
+        <h2>Switches</h2>
+        <div class="tef row">
+          <label class="rc-switch">
+            <input checked="" type="checkbox">
+            <span>Switch text 1</span>
+          </label>
+          <label class="rc-switch">
+            <input type="checkbox">
+            <span>Switch text 2</span>
+          </label>
+        </div>
+        <div class="tef row">
+          <label class="rc-switch right">
+            <input checked="" type="checkbox">
+            <span>Switch text 1</span>
+          </label>
+          <label class="rc-switch right">
+            <input type="checkbox">
+            <span>Switch text 2</span>
+          </label>
+        </div>
+        <div class="tef row">
+          <label class="rc-switch block">
+            <input checked="" type="checkbox">
+            <span>Switch text 1</span>
+          </label>
+          <label class="rc-switch block block">
+            <input type="checkbox">
+            <span>Switch text 2</span>
+          </label>
+        </div>
+        <div class="tef row">
+          <label class="rc-switch block right">
+            <input checked="" type="checkbox">
+            <span>Switch text 1</span>
+          </label>
+          <label class="rc-switch block right">
+            <input type="checkbox">
+            <span>Switch text 2</span>
+          </label>
+        </div>
+        <div class="tef row">
+          <label class="rc-switch disabled">
+            <input checked="" type="checkbox">
+            <span>Switch text 1</span>
+          </label>
+          <label class="rc-switch" disabled>
+            <input type="checkbox">
+            <span>Switch text 2</span>
+          </label>
+        </div>
 
-      <div class="tef-row tef-ok">
-        <textarea class="tef-input small">Text</textarea>
-        <textarea class="tef-input">Text</textarea>
-        <textarea class="tef-input large">Text</textarea>
-      </div>
-      <div class="tef-row tef-ok">
-        <textarea class="tef-input">Text</textarea>
-        <div class="tef-message">
-          This field is valid
-        </div>
-      </div>
-      <div class="tef-row tef-ok">
-        <textarea class="tef-input block">Text</textarea>
-        <div class="tef-message">
-          This field is valid
-        </div>
-      </div>
-      <div class="tef-row tef-error">
-        <textarea class="tef-input">Text</textarea>
-        <div class="tef-message">
-          This field is invalid
-        </div>
-      </div>
-      <div class="tef-row tef-error">
-        <textarea class="tef-input block">Text</textarea>
-        <div class="tef-message">
-          This field is invalid
-        </div>
-      </div>
-
-      <h2>Dropdowns</h2>
-      <div class="tef-row">
-        <div class="tef-dropdown" data-icon="angle_down">
-          <select>
-            <option>Option 1</option>
-            <option>Option 2</option>
-            <option>Option 3</option>
-          </select>
-        </div>
-        <div class="tef-dropdown active" data-icon="angle_down">
-          <span>Option 1</span>
-          <ul>
-            <li>Option 1</li>
-            <li>Option 2</li>
-            <li>Option 3</li>
+        <h2>Tabs</h2>
+        <div class="rc-row">
+          <ul class="rc-tabs" data-columns="4">
+            <li>Tab 1</li>
+            <li class="active">Tab 2</li>
+            <li>Tab 3 with a very loooooooooooooooooooong text</li>
+            <li>Tab 4</li>
           </ul>
         </div>
-        <div class="tef-dropdown active up" data-icon="angle_up">
-          <span>Option 1</span>
-          <ul>
-            <li>Option 1</li>
-            <li>Option 2</li>
-            <li>Option 3</li>
+        <div class="rc-row">
+          <ul class="rc-tabs" data-columns="3">
+            <li><i data-icon="user"></i></li>
+            <li class="active"><i data-icon="search"></i></li>
+            <li><i data-icon="help_circle"></i></li>
           </ul>
         </div>
-      </div>
-      <br><br><br><br><br>
-      <div class="tef-row">
-        <div class="tef-dropdown small" data-icon="angle_down">
-          <select>
-            <option>Option 1</option>
-            <option>Option 2</option>
-            <option>Option 3</option>
-          </select>
-        </div>
-        <div class="tef-dropdown" data-icon="angle_down">
-          <select>
-            <option>Option 1</option>
-            <option>Option 2</option>
-            <option>Option 3</option>
-          </select>
-        </div>
-        <div class="tef-dropdown large" data-icon="angle_down">
-          <select>
-            <option>Option 1</option>
-            <option>Option 2</option>
-            <option>Option 3</option>
-          </select>
-        </div>
-      </div>
-      <div class="tef-row">
-        <div class="tef-dropdown small block" data-icon="angle_down">
-          <select>
-            <option>Option 1</option>
-            <option>Option 2</option>
-            <option>Option 3</option>
-          </select>
-        </div>
-      </div>
-      <div class="tef-row">
-        <div class="tef-dropdown block" data-icon="angle_down">
-          <select>
-            <option>Option 1</option>
-            <option>Option 2</option>
-            <option>Option 3</option>
-          </select>
-        </div>
-      </div>
-      <div class="tef-row">
-        <div class="tef-dropdown large block" data-icon="angle_down">
-          <select>
-            <option>Option 1</option>
-            <option>Option 2</option>
-            <option>Option 3</option>
-          </select>
-        </div>
-      </div>
 
-      <h2>Radio buttons</h2>
-      <div class="tef row">
-        <label class="tef-radio">
-          <input checked="" type="radio" name="radio1">
-          <span>Radio text 1</span>
-        </label>
-        <label class="tef-radio">
-          <input type="radio" name="radio1">
-          <span>Radio text 2</span>
-        </label>
-      </div>
-      <div class="tef row">
-        <label class="tef-radio right">
-          <input checked="" type="radio" name="radio2">
-          <span>Radio text 1</span>
-        </label>
-        <label class="tef-radio right">
-          <input type="radio" name="radio2">
-          <span>Radio text 2</span>
-        </label>
-      </div>
-      <div class="tef row">
-        <label class="tef-radio block">
-          <input checked="" type="radio" name="radio3">
-          <span>Radio text 1</span>
-        </label>
-        <label class="tef-radio block block">
-          <input type="radio" name="radio3">
-          <span>Radio text 2</span>
-        </label>
-      <div class="tef row">
-        <label class="tef-radio block right">
-          <input checked="" type="radio" name="radio4">
-          <span>Radio text 1</span>
-        </label>
-        <label class="tef-radio block right">
-          <input type="radio" name="radio4">
-          <span>Radio text 2</span>
-        </label>
-      </div>
-      <div class="tef row">
-        <label class="tef-radio disabled">
-          <input checked="" type="radio" name="radio5">
-          <span>Radio text 1</span>
-        </label>
-        <label class="tef-radio" disabled>
-          <input type="radio" name="radio5">
-          <span>Radio text 2</span>
-        </label>
-      </div>
+        <h2>Toolbars</h2>
+        <div class="rc-row">
+          <nav class="rc-toolbar">
+            <ul>
+              <li><a href=""><i data-icon="user"></i></a></li>
+              <li><a href="">Edit</a></li>
+              <li class="active"><a href=""><i data-icon="search"></i></a></li>
+              <li><a href=""><i data-icon="help_circle"></i></a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="rc-row">
+          <nav class="rc-toolbar">
+            <ul class="right">
+              <li><a href=""><i data-icon="user"></i></a></li>
+              <li><a href="">Edit</a></li>
+              <li class="active"><a href=""><i data-icon="search"></i></a></li>
+              <li><a href=""><i data-icon="help_circle"></i></a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="rc-row">
+          <nav class="rc-toolbar dark">
+            <ul class="right">
+              <li><a href=""><i data-icon="user"></i></a></li>
+              <li><a href="">Edit</a></li>
+              <li class="active"><a href=""><i data-icon="search"></i></a></li>
+              <li><a href=""><i data-icon="help_circle"></i></a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="rc-row">
+          <nav class="rc-toolbar">
+            <ul>
+              <li><button class="rc-button subdued small">Cancel</button></li>
+            </ul>
+            <ul class="right">
+              <li>
+                <button class="rc-button small">OK</button>
+                <button class="rc-button negative small">Delete</button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="rc-row">
+          <nav class="rc-toolbar dark">
+            <ul>
+              <li><button class="rc-button subdued small">Cancel</button></li>
+            </ul>
+            <ul class="right">
+              <li>
+                <button class="rc-button small">OK</button>
+                <button class="rc-button negative small">Delete</button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="rc-row">
+          <nav class="rc-toolbar">
+            <ul class="rc-pagination right">
+              <li>
+                <a href=""><i data-icon="angle_left"></i></a>
+              </li>
+              <li>1 of 100</li>
+              <li>
+                <a href=""><i data-icon="angle_right"></i></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="rc-row">
+          <nav class="rc-toolbar dark">
+            <ul class="rc-pagination right">
+              <li>
+                <a href=""><i data-icon="angle_left"></i></a>
+              </li>
+              <li>1 of 100</li>
+              <li>
+                <a href=""><i data-icon="angle_right"></i></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
 
-      <h2>Checkboxes</h2>
-      <div class="tef row">
-        <label class="tef-checkbox">
-          <input checked="" type="checkbox">
-          <span data-icon="check">Checkbox text 1</span>
-        </label>
-        <label class="tef-checkbox">
-          <input type="checkbox">
-          <span data-icon="check">Checkbox text 2</span>
-        </label>
-      </div>
-      <div class="tef row">
-        <label class="tef-checkbox right">
-          <input checked="" type="checkbox">
-          <span data-icon="check">Checkbox text 1</span>
-        </label>
-        <label class="tef-checkbox right">
-          <input type="checkbox">
-          <span data-icon="check">Checkbox text 2</span>
-        </label>
-      </div>
-      <div class="tef row">
-        <label class="tef-checkbox block">
-          <input checked="" type="checkbox">
-          <span data-icon="check">Checkbox text 1</span>
-        </label>
-        <label class="tef-checkbox block block">
-          <input type="checkbox">
-          <span data-icon="check">Checkbox text 2</span>
-        </label>
-      </div>
-      <div class="tef row">
-        <label class="tef-checkbox block right">
-          <input checked="" type="checkbox">
-          <span data-icon="check">Checkbox text 1</span>
-        </label>
-        <label class="tef-checkbox block right">
-          <input type="checkbox">
-          <span data-icon="check">Checkbox text 2</span>
-        </label>
-      </div>
-      <div class="tef row">
-        <label class="tef-checkbox disabled">
-          <input checked="" type="checkbox">
-          <span data-icon="check">Checkbox text 1</span>
-        </label>
-        <label class="tef-checkbox" disabled>
-          <input type="checkbox">
-          <span data-icon="check">Checkbox text 2</span>
-        </label>
-      </div>
+        <h2>Lists</h2>
+        <div class="rc-row">
+          <div class="rc-list">
+            <ul>
+              <li><a href="">List item 1</a></li>
+              <li>List item 2 (not clickable)</li>
+              <li><a href="">List item 3</a></li>
+              <li><a href="">List item 4</a></li>
+              <li><a href="">List item 5</a></li>
+              <li><a href="">List item 6</a></li>
+            </ul>
+          </div>
+        </div>
 
-      <h2>Switches</h2>
-      <div class="tef row">
-        <label class="tef-switch">
-          <input checked="" type="checkbox">
-          <span>Switch text 1</span>
-        </label>
-        <label class="tef-switch">
-          <input type="checkbox">
-          <span>Switch text 2</span>
-        </label>
-      </div>
-      <div class="tef row">
-        <label class="tef-switch right">
-          <input checked="" type="checkbox">
-          <span>Switch text 1</span>
-        </label>
-        <label class="tef-switch right">
-          <input type="checkbox">
-          <span>Switch text 2</span>
-        </label>
-      </div>
-      <div class="tef row">
-        <label class="tef-switch block">
-          <input checked="" type="checkbox">
-          <span>Switch text 1</span>
-        </label>
-        <label class="tef-switch block block">
-          <input type="checkbox">
-          <span>Switch text 2</span>
-        </label>
-      </div>
-      <div class="tef row">
-        <label class="tef-switch block right">
-          <input checked="" type="checkbox">
-          <span>Switch text 1</span>
-        </label>
-        <label class="tef-switch block right">
-          <input type="checkbox">
-          <span>Switch text 2</span>
-        </label>
-      </div>
-      <div class="tef row">
-        <label class="tef-switch disabled">
-          <input checked="" type="checkbox">
-          <span>Switch text 1</span>
-        </label>
-        <label class="tef-switch" disabled>
-          <input type="checkbox">
-          <span>Switch text 2</span>
-        </label>
-      </div>
+        <h2>Tables</h2>
+        <table class="rc-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Column<i data-icon="sort"></i></th>
+            <th>Column<i data-icon="sort_asc"></i></th>
+            <th>Column<i data-icon="sort_desc"></i></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>1</th>
+            <td>000000</td>
+            <td>000000</td>
+            <td>000000</td>
+          </tr>
+          <tr>
+            <th>2</th>
+            <td>000000</td>
+            <td>000000</td>
+            <td>000000</td>
+          </tr>
+          <tr>
+            <th>3</th>
+            <td>000000</td>
+            <td>000000</td>
+            <td>000000</td>
+          </tr>
+        </tbody>
+      </table>
 
-      <h2>Tabs</h2>
-      <div class="tef-row">
-        <ul class="tef-tabs" data-columns="4">
-          <li>Tab 1</li>
-          <li class="active">Tab 2</li>
-          <li>Tab 3 with a very loooooooooooooooooooong text</li>
-          <li>Tab 4</li>
-        </ul>
-      </div>
-      <div class="tef-row">
-        <ul class="tef-tabs" data-columns="3">
-          <li><i data-icon="user"></i></li>
-          <li class="active"><i data-icon="search"></i></li>
-          <li><i data-icon="help_circle"></i></li>
-        </ul>
-      </div>
-
-      <h2>Toolbars</h2>
-      <div class="tef-row">
-        <nav class="tef-toolbar">
-          <ul>
-            <li><a href=""><i data-icon="user"></i></a></li>
-            <li><a href="">Edit</a></li>
-            <li class="active"><a href=""><i data-icon="search"></i></a></li>
-            <li><a href=""><i data-icon="help_circle"></i></a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="tef-row">
-        <nav class="tef-toolbar">
-          <ul class="right">
-            <li><a href=""><i data-icon="user"></i></a></li>
-            <li><a href="">Edit</a></li>
-            <li class="active"><a href=""><i data-icon="search"></i></a></li>
-            <li><a href=""><i data-icon="help_circle"></i></a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="tef-row">
-        <nav class="tef-toolbar dark">
-          <ul class="right">
-            <li><a href=""><i data-icon="user"></i></a></li>
-            <li><a href="">Edit</a></li>
-            <li class="active"><a href=""><i data-icon="search"></i></a></li>
-            <li><a href=""><i data-icon="help_circle"></i></a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="tef-row">
-        <nav class="tef-toolbar">
-          <ul>
-            <li><button class="tef-button subdued small">Cancel</button></li>
-          </ul>
-          <ul class="right">
-            <li>
-              <button class="tef-button small">OK</button>
-              <button class="tef-button negative small">Delete</button>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div class="tef-row">
-        <nav class="tef-toolbar dark">
-          <ul>
-            <li><button class="tef-button subdued small">Cancel</button></li>
-          </ul>
-          <ul class="right">
-            <li>
-              <button class="tef-button small">OK</button>
-              <button class="tef-button negative small">Delete</button>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div class="tef-row">
-        <nav class="tef-toolbar">
-          <ul class="tef-pagination right">
-            <li>
-              <a href=""><i data-icon="angle_left"></i></a>
-            </li>
-            <li>1 of 100</li>
-            <li>
-              <a href=""><i data-icon="angle_right"></i></a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div class="tef-row">
-        <nav class="tef-toolbar dark">
-          <ul class="tef-pagination right">
-            <li>
-              <a href=""><i data-icon="angle_left"></i></a>
-            </li>
-            <li>1 of 100</li>
-            <li>
-              <a href=""><i data-icon="angle_right"></i></a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-
-      <h2>Lists</h2>
-      <div class="tef-row">
-        <div class="tef-list">
-          <ul>
-            <li><a href="">List item 1</a></li>
-            <li>List item 2 (not clickable)</li>
-            <li><a href="">List item 3</a></li>
-            <li><a href="">List item 4</a></li>
-            <li><a href="">List item 5</a></li>
-            <li><a href="">List item 6</a></li>
-          </ul>
+        <h2>Tooltips</h2>
+        <div class="rc-center demo">
+          <div class="rc-tooltip active left" data-text="left">
+            <button class="rc-button">Button 1</button>
+          </div>
+          <div class="rc-tooltip active top" data-text="top">
+            <button class="rc-button positive">Button 2</button>
+          </div>
+          <div class="rc-tooltip active bottom" data-text="bottom">
+            <button class="rc-button negative">Button 3</button>
+          </div>
+          <div class="rc-tooltip active right" data-text="right">
+            <button class="rc-button significant">Button 4</button>
+          </div>
         </div>
-      </div>
-
-      <h2>Tables</h2>
-      <table class="tef-table">
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Column<i data-icon="sort"></i></th>
-          <th>Column<i data-icon="sort_asc"></i></th>
-          <th>Column<i data-icon="sort_desc"></i></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th>1</th>
-          <td>000000</td>
-          <td>000000</td>
-          <td>000000</td>
-        </tr>
-        <tr>
-          <th>2</th>
-          <td>000000</td>
-          <td>000000</td>
-          <td>000000</td>
-        </tr>
-        <tr>
-          <th>3</th>
-          <td>000000</td>
-          <td>000000</td>
-          <td>000000</td>
-        </tr>
-      </tbody>
-    </table>
-
-      <h2>Tooltips</h2>
-      <div class="tef-center demo">
-        <div class="tef-tooltip active left" data-text="left">
-          <button class="tef-button">Button 1</button>
+        <div class="rc-center demo">
+          <div class="rc-tooltip active start left" data-text="left start">
+            <button class="rc-button">Button 1</button>
+          </div>
+          <div class="rc-tooltip active start top" data-text="top start">
+            <button class="rc-button positive">Button 2</button>
+          </div>
+          <div class="rc-tooltip active start bottom" data-text="bottom start">
+            <button class="rc-button negative">Button 3</button>
+          </div>
+          <div class="rc-tooltip active start right" data-text="right start">
+            <button class="rc-button significant">Button 4</button>
+          </div>
         </div>
-        <div class="tef-tooltip active top" data-text="top">
-          <button class="tef-button positive">Button 2</button>
+        <div class="rc-center demo">
+          <div class="rc-tooltip active end left" data-text="left end">
+            <button class="rc-button">Button 1</button>
+          </div>
+          <div class="rc-tooltip active end top" data-text="top end">
+            <button class="rc-button positive">Button 2</button>
+          </div>
+          <div class="rc-tooltip active end bottom" data-text="bottom end">
+            <button class="rc-button negative">Button 3</button>
+          </div>
+          <div class="rc-tooltip active end right" data-text="right end">
+            <button class="rc-button significant">Button 4</button>
+          </div>
         </div>
-        <div class="tef-tooltip active bottom" data-text="bottom">
-          <button class="tef-button negative">Button 3</button>
+        <div class="rc-center demo">
+          <div class="rc-tooltip active reverse left" data-text="left reverse">
+            <button class="rc-button">Button 1</button>
+          </div>
+          <div class="rc-tooltip active reverse top" data-text="top reverse">
+            <button class="rc-button positive">Button 2</button>
+          </div>
+          <div class="rc-tooltip active reverse bottom" data-text="bottom reverse">
+            <button class="rc-button negative">Button 3</button>
+          </div>
+          <div class="rc-tooltip active reverse right" data-text="right reverse">
+            <button class="rc-button significant">Button 4</button>
+          </div>
         </div>
-        <div class="tef-tooltip active right" data-text="right">
-          <button class="tef-button significant">Button 4</button>
+        <div class="rc-center demo">
+          <div class="rc-tooltip active reverse left start" data-text="left reverse start">
+            <button class="rc-button">Button 1</button>
+          </div>
+          <div class="rc-tooltip active reverse top start" data-text="top reverse start">
+            <button class="rc-button positive">Button 2</button>
+          </div>
+          <div class="rc-tooltip active reverse bottom start" data-text="bottom reverse start">
+            <button class="rc-button negative">Button 3</button>
+          </div>
+          <div class="rc-tooltip active reverse right start" data-text="right reverse start">
+            <button class="rc-button significant">Button 4</button>
+          </div>
         </div>
-      </div>
-      <div class="tef-center demo">
-        <div class="tef-tooltip active start left" data-text="left start">
-          <button class="tef-button">Button 1</button>
-        </div>
-        <div class="tef-tooltip active start top" data-text="top start">
-          <button class="tef-button positive">Button 2</button>
-        </div>
-        <div class="tef-tooltip active start bottom" data-text="bottom start">
-          <button class="tef-button negative">Button 3</button>
-        </div>
-        <div class="tef-tooltip active start right" data-text="right start">
-          <button class="tef-button significant">Button 4</button>
-        </div>
-      </div>
-      <div class="tef-center demo">
-        <div class="tef-tooltip active end left" data-text="left end">
-          <button class="tef-button">Button 1</button>
-        </div>
-        <div class="tef-tooltip active end top" data-text="top end">
-          <button class="tef-button positive">Button 2</button>
-        </div>
-        <div class="tef-tooltip active end bottom" data-text="bottom end">
-          <button class="tef-button negative">Button 3</button>
-        </div>
-        <div class="tef-tooltip active end right" data-text="right end">
-          <button class="tef-button significant">Button 4</button>
-        </div>
-      </div>
-      <div class="tef-center demo">
-        <div class="tef-tooltip active reverse left" data-text="left reverse">
-          <button class="tef-button">Button 1</button>
-        </div>
-        <div class="tef-tooltip active reverse top" data-text="top reverse">
-          <button class="tef-button positive">Button 2</button>
-        </div>
-        <div class="tef-tooltip active reverse bottom" data-text="bottom reverse">
-          <button class="tef-button negative">Button 3</button>
-        </div>
-        <div class="tef-tooltip active reverse right" data-text="right reverse">
-          <button class="tef-button significant">Button 4</button>
-        </div>
-      </div>
-      <div class="tef-center demo">
-        <div class="tef-tooltip active reverse left start" data-text="left reverse start">
-          <button class="tef-button">Button 1</button>
-        </div>
-        <div class="tef-tooltip active reverse top start" data-text="top reverse start">
-          <button class="tef-button positive">Button 2</button>
-        </div>
-        <div class="tef-tooltip active reverse bottom start" data-text="bottom reverse start">
-          <button class="tef-button negative">Button 3</button>
-        </div>
-        <div class="tef-tooltip active reverse right start" data-text="right reverse start">
-          <button class="tef-button significant">Button 4</button>
-        </div>
-      </div>
-      <div class="tef-center demo">
-        <div class="tef-tooltip active reverse left end" data-text="left reverse end">
-          <button class="tef-button">Button 1</button>
-        </div>
-        <div class="tef-tooltip active reverse top end" data-text="top reverse end">
-          <button class="tef-button positive">Button 2</button>
-        </div>
-        <div class="tef-tooltip active reverse bottom end" data-text="bottom reverse end">
-          <button class="tef-button negative">Button 3</button>
-        </div>
-        <div class="tef-tooltip active reverse right end" data-text="right reverse end">
-          <button class="tef-button significant">Button 4</button>
+        <div class="rc-center demo">
+          <div class="rc-tooltip active reverse left end" data-text="left reverse end">
+            <button class="rc-button">Button 1</button>
+          </div>
+          <div class="rc-tooltip active reverse top end" data-text="top reverse end">
+            <button class="rc-button positive">Button 2</button>
+          </div>
+          <div class="rc-tooltip active reverse bottom end" data-text="bottom reverse end">
+            <button class="rc-button negative">Button 3</button>
+          </div>
+          <div class="rc-tooltip active reverse right end" data-text="right reverse end">
+            <button class="rc-button significant">Button 4</button>
+          </div>
         </div>
       </div>
     </div>
-
-    <script>
-      var theme = document.getElementById('themeSelector');
-      theme.addEventListener('change', function() {
-        var link = document.getElementById('themeFile');
-        link.href = '../theme_'
-          + theme.value + '/css/components.'
-          + theme.value + '.css';
-      });
-    </script>
   </body>
 </html>

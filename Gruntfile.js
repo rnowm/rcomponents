@@ -2,6 +2,45 @@ module.exports = function(grunt) {
   require('jit-grunt')(grunt);
 
   grunt.initConfig({
+    less: {
+      default: {
+        files: {
+          'css/rcomponents.css': 'less/theme.less',
+        }
+      }
+    },
+
+    autoprefixer: {
+      options: {
+        browsers: ['last 5 versions']
+      },
+      dist: {
+        src: 'css/*.css'
+      },
+    },
+
+    concat: {
+      default: {
+       src: [
+          'icons/fonts/icons.css',
+          'css/rcomponents.css',
+        ],
+        dest: 'css/rcomponents.css'
+      }
+    },
+
+    cssmin: {
+      options: {
+        shorthandCompacting: false,
+        roundingPrecision: -1
+      },
+      target: {
+        files: {
+          'css/rcomponents.min.css': 'css/rcomponents.css'
+        }
+      }
+    },
+
     bump: {
       // upgrade release and push to master
       options : {
@@ -48,10 +87,63 @@ module.exports = function(grunt) {
           ]
         }
       }
+    },
+
+    watch: {
+      styles: {
+        files: ['less/*.less'],
+        tasks: ['less', 'concat'],
+        options: {
+          nospawn: true,
+          livereload: true
+        }
+      }
+    },
+
+    // Creates embedded icon font
+    webfont: {
+      embedded: {
+        src: 'icons/source/*.svg',
+        dest: 'icons/fonts/',
+        options: {
+          font: 'icons',
+          embed: 'woff,ttf,eot',
+          engine: 'node',
+          template: 'icons/templates/style.css',
+          htmlDemoTemplate: 'icons/templates/index.html',
+          templateOptions: {
+            baseClass: '',
+            classPrefix: '',
+            mixinPrefix: ""
+          }
+        }
+      }
+    },
+
+    rename: {
+      font: {
+        src: 'icons/fonts/icons.eot',
+        dest: 'css/icons.eot',
+      }
     }
   });
 
+  grunt.registerTask('default', [
+    'less',
+    'concat',
+    'watch'
+  ]);
+
+  grunt.registerTask('icons', [
+    'webfont',
+    'rename'
+  ]);
+
   grunt.registerTask('release', [
+    'less',
+    'autoprefixer',
+    'concat',
+    'cssmin',
     'exec:add',
     'prompt',
     'exec:message',
