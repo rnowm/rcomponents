@@ -171,22 +171,7 @@ label {
     & ~ * { margin: 0 0 0 -5px !important; }
   }
 
-  ::content > * {
-    border-radius: 0 !important;
-    &:first-child,
-    &:first-child > button,
-    &:first-child::shadow .rc-button { border-radius: @radius 0 0 @radius !important; }
-    &:last-child,
-    &:last-child > button,
-    &:last-child::shadow .rc-button { border-radius: 0 @radius @radius 0 !important; }
-    &:first-child:last-child { border-radius: @radius !important; }
-
-    // remove inline-block space
-    & ~ * { margin: 0 0 0 -5px !important; }
-  }
-
   .rc-button + .rc-button { border-left-color: white; }
-  ::content rc-button + rc-button::shadow .rc-button{ border-left-color: white; }
 }
 
 textarea.rc-input {
