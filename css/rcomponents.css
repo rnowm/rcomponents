@@ -3441,9 +3441,6 @@ label.rc-switch.right input:checked ~ span:before {
   text-align: center;
   padding: 0 15px;
   border-right: 1px solid #ccc;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 .rc-toolbar li:first-child {
   border-left: 1px solid #ccc;
@@ -3454,6 +3451,11 @@ label.rc-switch.right input:checked ~ span:before {
 }
 .rc-toolbar li [data-icon] {
   font-size: 24px;
+}
+.rc-toolbar li > * {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .rc-toolbar a {
   display: block;

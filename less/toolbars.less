@@ -29,7 +29,6 @@
     text-align: center;
     padding: 0 15px;
     border-right: 1px solid #ccc;
-    .truncate();
 
     &:first-child {
       border-left: 1px solid #ccc;
@@ -40,9 +39,9 @@
       }
     }
 
-    [data-icon] {
-      font-size: 24px;
-    }
+    [data-icon] { font-size: 24px; }
+
+    & > * { .truncate(); }
   }
 
   a {
