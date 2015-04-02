@@ -58,19 +58,6 @@ button::-moz-focus-inner {
   span + [data-icon] { margin-left: 5px; }
   span { font-size: 15px; }
 
-  ::content {
-    [data-icon]:before {
-      position: relative;
-      font-size: 23px;
-      line-height: 0;
-      top: 4px;
-    }
-
-    [data-icon] + span,
-    span + [data-icon] { margin-left: 5px; }
-    span { font-size: 15px; }
-  }
-
   // sizes
   &.small {
     font-size: 11px;
@@ -82,14 +69,6 @@ button::-moz-focus-inner {
       top: 3px;
     }
     span { font-size: 11px; }
-
-    ::content {
-      [data-icon]:before {
-        font-size: 18px;
-        top: 3px;
-      }
-      span { font-size: 11px; }
-    }
   }
 
   &.large {
@@ -102,14 +81,6 @@ button::-moz-focus-inner {
       top: 5px;
     }
     span { font-size: 24px; }
-
-    ::content {
-      [data-icon]:before {
-        font-size: 32px;
-        top: 5px;
-      }
-      span { font-size: 24px; }
-    }
   }
 
   // colors loop

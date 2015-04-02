@@ -2297,19 +2297,6 @@ button::-moz-focus-inner {
 .rc-button span {
   font-size: 15px;
 }
-.rc-button ::content [data-icon]:before {
-  position: relative;
-  font-size: 23px;
-  line-height: 0;
-  top: 4px;
-}
-.rc-button ::content [data-icon] + span,
-.rc-button ::content span + [data-icon] {
-  margin-left: 5px;
-}
-.rc-button ::content span {
-  font-size: 15px;
-}
 .rc-button.small {
   font-size: 11px;
   line-height: 13px;
@@ -2322,13 +2309,6 @@ button::-moz-focus-inner {
 .rc-button.small span {
   font-size: 11px;
 }
-.rc-button.small ::content [data-icon]:before {
-  font-size: 18px;
-  top: 3px;
-}
-.rc-button.small ::content span {
-  font-size: 11px;
-}
 .rc-button.large {
   font-size: 24px;
   line-height: 29px;
@@ -2339,13 +2319,6 @@ button::-moz-focus-inner {
   top: 5px;
 }
 .rc-button.large span {
-  font-size: 24px;
-}
-.rc-button.large ::content [data-icon]:before {
-  font-size: 32px;
-  top: 5px;
-}
-.rc-button.large ::content span {
   font-size: 24px;
 }
 .rc-button .colors-loop.significant {
@@ -2667,29 +2640,7 @@ label {
 .rc-group > * ~ * {
   margin: 0 0 0 -5px !important;
 }
-.rc-group ::content > * {
-  border-radius: 0 !important;
-}
-.rc-group ::content > *:first-child,
-.rc-group ::content > *:first-child > button,
-.rc-group ::content > *:first-child::shadow .rc-button {
-  border-radius: 4px 0 0 4px !important;
-}
-.rc-group ::content > *:last-child,
-.rc-group ::content > *:last-child > button,
-.rc-group ::content > *:last-child::shadow .rc-button {
-  border-radius: 0 4px 4px 0 !important;
-}
-.rc-group ::content > *:first-child:last-child {
-  border-radius: 4px !important;
-}
-.rc-group ::content > * ~ * {
-  margin: 0 0 0 -5px !important;
-}
 .rc-group .rc-button + .rc-button {
-  border-left-color: white;
-}
-.rc-group ::content rc-button + rc-button::shadow .rc-button {
   border-left-color: white;
 }
 textarea.rc-input {
