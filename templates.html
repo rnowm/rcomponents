@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/rcomponents.css">
 
     <style>
-      header[data-columns] { padding-top: 30px; }
+      header[columns] { padding-top: 30px; }
       h1 { margin-top: 0; }
       header > div { padding-top: 2px; }
       code {
@@ -33,12 +33,12 @@
     <div class="rc-wrapper">
       <header class="rc-header">
         <nav>
-          <button id="show-menu-btn" onclick="showMenu()" class="rc-menu" data-icon="menu"></button>
-          <button id="hide-menu-btn" onclick="hideMenu()" class="rc-close" data-icon="close"></button>
+          <button id="show-menu-btn" onclick="showMenu()" class="rc-menu" icon="menu"></button>
+          <button id="hide-menu-btn" onclick="hideMenu()" class="rc-close" icon="close"></button>
           <ul id="menu" onclick="hideMenu()">
-            <li><span>Hello George!</span><i data-icon="user"></i></li>
-            <li><a href=""><span>Help</span><i data-icon="help_circle"></i></a></li>
-            <li><a href=""><span>Exit</span><i data-icon="close_circle"></i></a></li>
+            <li><span>Hello George!</span><i icon="user"></i></li>
+            <li><a href=""><span>Help</span><i icon="help_circle"></i></a></li>
+            <li><a href=""><span>Exit</span><i icon="close_circle"></i></a></li>
           </ul>
         </nav>
         <h1><a href="/">R-Components</a></h1>
@@ -49,12 +49,12 @@
         <h2>Headers</h2>
         <header class="rc-header">
           <nav>
-            <button class="rc-menu" data-icon="menu"></button>
-            <button class="rc-close" data-icon="close"></button>
+            <button class="rc-menu" icon="menu"></button>
+            <button class="rc-close" icon="close"></button>
             <ul>
-              <li><span>Hello George!</span><i data-icon="user"></i></li>
-              <li><a href=""><span>Help</span><i data-icon="help_circle"></i></a></li>
-              <li><a href=""><span>Exit</span><i data-icon="close_circle"></i></a></li>
+              <li><span>Hello George!</span><i icon="user"></i></li>
+              <li><a href=""><span>Help</span><i icon="help_circle"></i></a></li>
+              <li><a href=""><span>Exit</span><i icon="close_circle"></i></a></li>
             </ul>
           </nav>
           <h1><a href="/">Service name</a></h1>
@@ -73,7 +73,7 @@
         <div class="rc-dialog">
           <header>
             Download started...
-            <button class="rc-close" data-icon="close"></button>
+            <button class="rc-close" icon="close"></button>
           </header>
           <p>Downloading document. You will find it in your Downloads folder.</p>
           <footer>
@@ -82,26 +82,26 @@
         </div>
 
         <h2>Sidebars</h2>
-        <div data-columns="3">
+        <div columns="3">
           <nav class="rc-sidebar">
-            <ul class="rc-tabs" data-columns="3">
-              <li><i data-icon="user"></i></li>
-              <li class="active"><i data-icon="search"></i></li>
-              <li><i data-icon="help_circle"></i></li>
+            <ul class="rc-tabs" columns="3">
+              <li><i icon="user"></i></li>
+              <li class="active"><i icon="search"></i></li>
+              <li><i icon="help_circle"></i></li>
             </ul>
             <nav class="rc-toolbar">
               <ul>
-                <li><i data-icon="user"></i></li>
+                <li><i icon="user"></i></li>
                 <li>Edit</li>
-                <li class="active"><i data-icon="search"></i></li>
-                <li><i data-icon="help_circle"></i></li>
+                <li class="active"><i icon="search"></i></li>
+                <li><i icon="help_circle"></i></li>
               </ul>
             </nav>
             <div class="rc-list">
               <ul>
                 <li>
                   <input type="text" class="rc-input icon small block">
-                  <i data-icon="search"></i>
+                  <i icon="search"></i>
                 </li>
               </ul>
               <header>Group 1</header>
