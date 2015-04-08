@@ -20,7 +20,7 @@ body {
   .media-min-xs({ padding: 20px 32px; });
 }
 
-[data-columns] {
+[columns] {
   display: block;
   margin: 0;
   padding: 0;
@@ -42,67 +42,67 @@ body {
 @columns: 12;
 // for loop to generate all column widths (w/o gutter)
 .for (@i) when (@i > 0) {
-  [data-columns="@{i}"] {
+  [columns~="@{i}"] {
     & > * { .width(@i); }
-    .forc-span (@j) when (@j > 0) {
-      & > [data-column-span="@{j}"] { .width(@i/@j); }
-      & > [data-column-offset="@{j}"] { .margin(@i/@j); }
-      .forc-span(@j - 1);
+    .for-span (@j) when (@j > 0) {
+      & > [column-span~="@{j}"] { .width(@i/@j); }
+      & > [column-offset~="@{j}"] { .margin(@i/@j); }
+      .for-span(@j - 1);
     }
-    .forc-span(@i - 1);
+    .for-span(@i - 1);
   }
 
   // media queries
   .media-max-md({
-    [data-columns-md="@{i}"] {
+    [columns~="md@{i}"] {
       & > * { .width(@i); }
-      .forc-span (@j) when (@j > 0) {
-        & > [data-column-span-md="@{j}"] { .width(@i/@j); }
-        & > [data-column-offset-md="@{j}"] { .margin(@i/@j); }
-        .forc-span(@j - 1);
+      .for-span (@j) when (@j > 0) {
+        & > [column-span~="md@{j}"] { .width(@i/@j); }
+        & > [column-offset~="md@{j}"] { .margin(@i/@j); }
+        .for-span(@j - 1);
       }
-     .forc-span(@i - 1);
+     .for-span(@i - 1);
     }
-    [data-columns-md="@{i}"] > [data-column-span-md="@{i}"] {
+    [columns~="md@{i}"] > [column-span~="md@{i}"] {
       width: 100%;
     }
-    [data-columns-md="@{i}"] > [data-column-offset-md="0"] {
+    [columns~="md@{i}"] > [column-offset~="md0"] {
       margin-left: 0;
     }
   });
 
   .media-max-sm({
-    [data-columns-sm="@{i}"] {
+    [columns~="sm@{i}"] {
       & > * { .width(@i); }
-      .forc-span (@j) when (@j > 0) {
-        & > [data-column-span-sm="@{j}"] { .width(@i/@j); }
-        & > [data-column-offset-sm="@{j}"] { .margin(@i/@j); }
-        .forc-span(@j - 1);
+      .for-span (@j) when (@j > 0) {
+        & > [column-span~="sm@{j}"] { .width(@i/@j); }
+        & > [column-offset~="sm@{j}"] { .margin(@i/@j); }
+        .for-span(@j - 1);
       }
-     .forc-span(@i - 1);
+     .for-span(@i - 1);
     }
-    [data-columns-sm="@{i}"] > [data-column-span-sm="@{i}"] {
+    [columns~="sm@{i}"] > [column-span~="sm@{i}"] {
       width: 100%;
     }
-    [data-columns-sm="@{i}"] > [data-column-offset-sm="0"] {
+    [columns~="sm@{i}"] > [column-offset~="sm0"] {
       margin-left: 0;
     }
   });
 
   .media-max-xs({
-    [data-columns-xs="@{i}"] {
+    [columns~="xs@{i}"] {
       & > * { .width(@i); }
-      .forc-span (@j) when (@j > 0) {
-        & > [data-column-span-xs="@{j}"] { .width(@i/@j); }
-        & > [data-column-offset-xs="@{j}"] { .margin(@i/@j); }
-        .forc-span(@j - 1);
+      .for-span (@j) when (@j > 0) {
+        & > [column-span~="xs@{j}"] { .width(@i/@j); }
+        & > [column-offset~="xs@{j}"] { .margin(@i/@j); }
+        .for-span(@j - 1);
       }
-     .forc-span(@i - 1);
+     .for-span(@i - 1);
     }
-    [data-columns-xs="@{i}"] > [data-column-span-xs="@{i}"] {
+    [columns~="xs@{i}"] > [column-span~="xs@{i}"] {
       width: 100%;
     }
-    [data-columns-xs="@{i}"] > [data-column-offset-xs="0"] {
+    [columns~="xs@{i}"] > [column-offset~="xs0"] {
       margin-left: 0;
     }
   });
@@ -115,16 +115,16 @@ body {
 .margin(@width) { margin-left: 100% / @width; }
 
 // hide columns
-[data-columns="0"] { display: none }
+[columns~="0"] { display: none }
 .media-max-md({
-  [data-columns-md="0"],
-  [data-columns-span-md="0"] { display: none }
+  [columns~="md0"],
+  [column-span~="md0"] { display: none }
 });
 .media-max-sm({
-  [data-columns-sm="0"],
-  [data-columns-span-sm="0"] { display: none }
+  [columns~="sm0"],
+  [column-span~="sm0"] { display: none }
 });
 .media-max-xs({
-  [data-columns-xs="0"],
-  [data-columns-span-xs="0"] { display: none }
+  [columns~="xs0"],
+  [column-span~="xs0"] { display: none }
 });

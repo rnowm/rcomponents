@@ -12,38 +12,38 @@
     <div class="rc-wrapper">
       <header class="rc-header">
         <nav>
-          <button id="show-menu-btn" onclick="showMenu()" class="rc-menu" data-icon="menu"></button>
-          <button id="hide-menu-btn" onclick="hideMenu()" class="rc-close" data-icon="close"></button>
+          <button id="show-menu-btn" onclick="showMenu()" class="rc-menu" icon="menu"></button>
+          <button id="hide-menu-btn" onclick="hideMenu()" class="rc-close" icon="close"></button>
           <ul id="menu" onclick="hideMenu()">
-            <li><span>Hello George!</span><i data-icon="user"></i></li>
-            <li><a href=""><span>Help</span><i data-icon="help_circle"></i></a></li>
-            <li><a href=""><span>Exit</span><i data-icon="close_circle"></i></a></li>
+            <li><span>Hello George!</span><i icon="user"></i></li>
+            <li><a href=""><span>Help</span><i icon="help_circle"></i></a></li>
+            <li><a href=""><span>Exit</span><i icon="close_circle"></i></a></li>
           </ul>
         </nav>
         <h1><a href="/">R-Components</a></h1>
         <p>Another UI kit</p>
       </header>
 
-      <div data-columns="4" data-columns-md="3" data-columns-sm="1" class="rc-relative">
-        <nav class="rc-sidebar absolute" data-columns-sm="0">
-          <ul class="rc-tabs" data-columns="3">
-            <li><i data-icon="user"></i></li>
-            <li class="active"><i data-icon="search"></i></li>
-            <li><i data-icon="help_circle"></i></li>
+      <div columns="4 md3 sm1" class="rc-relative">
+        <nav class="rc-sidebar absolute" columns="sm0">
+          <ul class="rc-tabs" columns="3">
+            <li><i icon="user"></i></li>
+            <li class="active"><i icon="search"></i></li>
+            <li><i icon="help_circle"></i></li>
           </ul>
           <nav class="rc-toolbar">
             <ul>
-              <li><i data-icon="user"></i></li>
+              <li><i icon="user"></i></li>
               <li>Edit</li>
-              <li class="active"><i data-icon="search"></i></li>
-              <li><i data-icon="help_circle"></i></li>
+              <li class="active"><i icon="search"></i></li>
+              <li><i icon="help_circle"></i></li>
             </ul>
           </nav>
           <div class="rc-list">
             <ul>
               <li>
                 <input type="text" class="rc-input icon small block">
-                <i data-icon="search"></i>
+                <i icon="search"></i>
               </li>
             </ul>
             <header>Group 1</header>
@@ -66,10 +66,10 @@
             </ul>
           </div>
         </nav>
-        <section class="rc-content" data-column-offset="1" data-column-offset-md="1" data-column-offset-sm="0" data-column-span="3" data-column-span-md="2" data-column-span-sm="1">
+        <section class="rc-content" column-offset="1" column-offset-md="1" column-offset-sm="0" column-span="3" column-span-md="2" column-span-sm="1">
           <h2>Forms</h1>
           <p>This page shows basic form elements.</p>
-          <article data-columns="2" data-columns-sm="1" class="rc-gutter">
+          <article columns="2 sm1" class="rc-gutter">
             <div class="rc-row">
               <label>Consectetuer</label>
               <input type="text" class="rc-input block">
@@ -83,14 +83,14 @@
             <label>Sed diam nonummy</label>
             <input type="text" class="rc-input block">
           </article>
-          <article data-columns="4" data-columns-sm="2" data-columns-xs="1" class="rc-gutter">
-            <div class="rc-row" data-column-span="2" data-column-span-sm="2" data-column-span-xs="1">
+          <article columns="4 sm2 xs1" class="rc-gutter">
+            <div class="rc-row" column-span="2 sm2 xs1">
               <label>Nibh euismod</label>
               <input type="text" class="rc-input block">
             </div>
             <div class="rc-row">
               <label>Tincidunt</label>
-              <div class="rc-dropdown block" data-icon="angle_down">
+              <div class="rc-dropdown block" icon="angle_down">
                 <select name="state">
                   <option>Volutpat</option>
                   <option>Adipiscing</option>
@@ -129,15 +129,15 @@
             <p>Laoreet dolore</p>
             <label class="rc-checkbox">
               <input type="checkbox" checked>
-              <span data-icon="check">Lorem ipsum dolor sit amet</span>
+              <span icon="check">Lorem ipsum dolor sit amet</span>
             </label>
             <label class="rc-checkbox">
               <input type="checkbox">
-              <span data-icon="check">Hendrerit in vulputate velit esse molestie </span>
+              <span icon="check">Hendrerit in vulputate velit esse molestie </span>
             </label>
             <label class="rc-checkbox">
               <input type="checkbox">
-              <span data-icon="check">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat </span>
+              <span icon="check">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat </span>
             </label>
           </article>
           <br>

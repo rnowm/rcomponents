@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/rcomponents.css">
 
     <style>
-      header[data-columns] { padding-top: 30px; }
+      header[columns] { padding-top: 30px; }
       h1 { margin-top: 0; }
       header > div { padding-top: 2px; }
       code {
@@ -38,12 +38,12 @@
     <div class="rc-wrapper">
       <header class="rc-header">
         <nav>
-          <button id="show-menu-btn" onclick="showMenu()" class="rc-menu" data-icon="menu"></button>
-          <button id="hide-menu-btn" onclick="hideMenu()" class="rc-close" data-icon="close"></button>
+          <button id="show-menu-btn" onclick="showMenu()" class="rc-menu" icon="menu"></button>
+          <button id="hide-menu-btn" onclick="hideMenu()" class="rc-close" icon="close"></button>
           <ul id="menu" onclick="hideMenu()">
-            <li><span>Hello George!</span><i data-icon="user"></i></li>
-            <li><a href=""><span>Help</span><i data-icon="help_circle"></i></a></li>
-            <li><a href=""><span>Exit</span><i data-icon="close_circle"></i></a></li>
+            <li><span>Hello George!</span><i icon="user"></i></li>
+            <li><a href=""><span>Help</span><i icon="help_circle"></i></a></li>
+            <li><a href=""><span>Exit</span><i icon="close_circle"></i></a></li>
           </ul>
         </nav>
         <h1><a href="/">R-Components</a></h1>
@@ -87,15 +87,15 @@
             Add
           </button>
           <button class="rc-button small">
-            <i data-icon="plus"></i>
+            <i icon="plus"></i>
           </button>
           <button class="rc-button small">
-            <i data-icon="plus"></i>
+            <i icon="plus"></i>
             <span>Add</span>
           </button>
           <button class="rc-button small">
             <span>Add</span>
-            <i data-icon="plus"></i>
+            <i icon="plus"></i>
           </button>
         </div>
         <div class="rc-row">
@@ -103,15 +103,15 @@
             Add
           </button>
           <button class="rc-button">
-            <i data-icon="plus"></i>
+            <i icon="plus"></i>
           </button>
           <button class="rc-button">
-            <i data-icon="plus"></i>
+            <i icon="plus"></i>
             <span>Add</span>
           </button>
           <button class="rc-button">
             <span>Add</span>
-            <i data-icon="plus"></i>
+            <i icon="plus"></i>
           </button>
         </div>
         <div class="rc-row">
@@ -119,15 +119,15 @@
             Add
           </button>
           <button class="rc-button large">
-            <i data-icon="plus"></i>
+            <i icon="plus"></i>
           </button>
           <button class="rc-button large">
-            <i data-icon="plus"></i>
+            <i icon="plus"></i>
             <span>Add</span>
           </button>
           <button class="rc-button large">
             <span>Add</span>
-            <i data-icon="plus"></i>
+            <i icon="plus"></i>
           </button>
         </div>
         <div class="rc-row">
@@ -161,11 +161,11 @@
         </div>
         <div class="rc-row">
           <input class="rc-input icon small" type="text" value="Search">
-          <i data-icon="search"></i>
+          <i icon="search"></i>
           <input class="rc-input icon" type="text" value="Search">
-          <i data-icon="search"></i>
+          <i icon="search"></i>
           <input class="rc-input icon large" type="text" value="Search">
-          <i data-icon="search"></i>
+          <i icon="search"></i>
         </div>
         <div class="rc-row">
           <label>Label</label>
@@ -176,7 +176,7 @@
         </div>
         <div class="rc-row">
           <input class="rc-input block icon" type="text" value="Search">
-          <i data-icon="search"></i>
+          <i icon="search"></i>
         </div>
         <div class="rc-row">
           <input type="text" class="rc-input large block" value="input">
@@ -222,29 +222,29 @@
         </div>
         <div class="rc-group">
           <button class="rc-button small">
-            <i data-icon="minus"></i>
+            <i icon="minus"></i>
           </button>
           <input type="text" class="rc-input small" placeholder="Enter user name">
           <button class="rc-button small">
-            <i data-icon="plus"></i>
+            <i icon="plus"></i>
           </button>
         </div>
         <div class="rc-group">
           <button class="rc-button">
-            <i data-icon="minus"></i>
+            <i icon="minus"></i>
           </button>
           <input type="text" class="rc-input" placeholder="Enter user name">
           <button class="rc-button">
-            <i data-icon="plus"></i>
+            <i icon="plus"></i>
           </button>
         </div>
         <div class="rc-group">
           <button class="rc-button large">
-            <i data-icon="minus"></i>
+            <i icon="minus"></i>
           </button>
           <input type="text" class="rc-input large" placeholder="Enter user name">
           <button class="rc-button large">
-            <i data-icon="plus"></i>
+            <i icon="plus"></i>
           </button>
         </div>
 
@@ -282,14 +282,14 @@
 
         <h2>Dropdowns</h2>
         <div class="rc-row">
-          <div class="rc-dropdown" data-icon="angle_down">
+          <div class="rc-dropdown" icon="angle_down">
             <select>
               <option>Option 1</option>
               <option>Option 2</option>
               <option>Option 3</option>
             </select>
           </div>
-          <div class="rc-dropdown active" data-icon="angle_down">
+          <div class="rc-dropdown active" icon="angle_down">
             <span>Option 1</span>
             <ul>
               <li>Option 1</li>
@@ -297,7 +297,7 @@
               <li>Option 3</li>
             </ul>
           </div>
-          <div class="rc-dropdown active up" data-icon="angle_up">
+          <div class="rc-dropdown active up" icon="angle_up">
             <span>Option 1</span>
             <ul>
               <li>Option 1</li>
@@ -308,30 +308,21 @@
         </div>
         <br><br><br><br><br>
         <div class="rc-row">
-          <div class="rc-dropdown small" data-icon="angle_down">
+          <div class="rc-dropdown small" icon="angle_down">
             <select>
               <option>Option 1</option>
               <option>Option 2</option>
               <option>Option 3</option>
             </select>
           </div>
-          <div class="rc-dropdown" data-icon="angle_down">
+          <div class="rc-dropdown" icon="angle_down">
             <select>
               <option>Option 1</option>
               <option>Option 2</option>
               <option>Option 3</option>
             </select>
           </div>
-          <div class="rc-dropdown large" data-icon="angle_down">
-            <select>
-              <option>Option 1</option>
-              <option>Option 2</option>
-              <option>Option 3</option>
-            </select>
-          </div>
-        </div>
-        <div class="rc-row">
-          <div class="rc-dropdown small block" data-icon="angle_down">
+          <div class="rc-dropdown large" icon="angle_down">
             <select>
               <option>Option 1</option>
               <option>Option 2</option>
@@ -340,7 +331,7 @@
           </div>
         </div>
         <div class="rc-row">
-          <div class="rc-dropdown block" data-icon="angle_down">
+          <div class="rc-dropdown small block" icon="angle_down">
             <select>
               <option>Option 1</option>
               <option>Option 2</option>
@@ -349,7 +340,16 @@
           </div>
         </div>
         <div class="rc-row">
-          <div class="rc-dropdown large block" data-icon="angle_down">
+          <div class="rc-dropdown block" icon="angle_down">
+            <select>
+              <option>Option 1</option>
+              <option>Option 2</option>
+              <option>Option 3</option>
+            </select>
+          </div>
+        </div>
+        <div class="rc-row">
+          <div class="rc-dropdown large block" icon="angle_down">
             <select>
               <option>Option 1</option>
               <option>Option 2</option>
@@ -413,51 +413,51 @@
         <div class="tef row">
           <label class="rc-checkbox">
             <input checked="" type="checkbox">
-            <span data-icon="check">Checkbox text 1</span>
+            <span icon="check">Checkbox text 1</span>
           </label>
           <label class="rc-checkbox">
             <input type="checkbox">
-            <span data-icon="check">Checkbox text 2</span>
+            <span icon="check">Checkbox text 2</span>
           </label>
         </div>
         <div class="tef row">
           <label class="rc-checkbox right">
             <input checked="" type="checkbox">
-            <span data-icon="check">Checkbox text 1</span>
+            <span icon="check">Checkbox text 1</span>
           </label>
           <label class="rc-checkbox right">
             <input type="checkbox">
-            <span data-icon="check">Checkbox text 2</span>
+            <span icon="check">Checkbox text 2</span>
           </label>
         </div>
         <div class="tef row">
           <label class="rc-checkbox block">
             <input checked="" type="checkbox">
-            <span data-icon="check">Checkbox text 1</span>
+            <span icon="check">Checkbox text 1</span>
           </label>
           <label class="rc-checkbox block block">
             <input type="checkbox">
-            <span data-icon="check">Checkbox text 2</span>
+            <span icon="check">Checkbox text 2</span>
           </label>
         </div>
         <div class="tef row">
           <label class="rc-checkbox block right">
             <input checked="" type="checkbox">
-            <span data-icon="check">Checkbox text 1</span>
+            <span icon="check">Checkbox text 1</span>
           </label>
           <label class="rc-checkbox block right">
             <input type="checkbox">
-            <span data-icon="check">Checkbox text 2</span>
+            <span icon="check">Checkbox text 2</span>
           </label>
         </div>
         <div class="tef row">
           <label class="rc-checkbox disabled">
             <input checked="" type="checkbox">
-            <span data-icon="check">Checkbox text 1</span>
+            <span icon="check">Checkbox text 1</span>
           </label>
           <label class="rc-checkbox" disabled>
             <input type="checkbox">
-            <span data-icon="check">Checkbox text 2</span>
+            <span icon="check">Checkbox text 2</span>
           </label>
         </div>
 
@@ -515,7 +515,7 @@
 
         <h2>Tabs</h2>
         <div class="rc-row">
-          <ul class="rc-tabs" data-columns="4">
+          <ul class="rc-tabs" columns="4">
             <li>Tab 1</li>
             <li class="active">Tab 2</li>
             <li>Tab 3 with a very loooooooooooooooooooong text</li>
@@ -523,10 +523,10 @@
           </ul>
         </div>
         <div class="rc-row">
-          <ul class="rc-tabs" data-columns="3">
-            <li><i data-icon="user"></i></li>
-            <li class="active"><i data-icon="search"></i></li>
-            <li><i data-icon="help_circle"></i></li>
+          <ul class="rc-tabs" columns="3">
+            <li><i icon="user"></i></li>
+            <li class="active"><i icon="search"></i></li>
+            <li><i icon="help_circle"></i></li>
           </ul>
         </div>
 
@@ -534,30 +534,30 @@
         <div class="rc-row">
           <nav class="rc-toolbar">
             <ul>
-              <li><a href=""><i data-icon="user"></i></a></li>
+              <li><a href=""><i icon="user"></i></a></li>
               <li><a href="">Edit</a></li>
-              <li class="active"><a href=""><i data-icon="search"></i></a></li>
-              <li><a href=""><i data-icon="help_circle"></i></a></li>
+              <li class="active"><a href=""><i icon="search"></i></a></li>
+              <li><a href=""><i icon="help_circle"></i></a></li>
             </ul>
           </nav>
         </div>
         <div class="rc-row">
           <nav class="rc-toolbar">
             <ul class="right">
-              <li><a href=""><i data-icon="user"></i></a></li>
+              <li><a href=""><i icon="user"></i></a></li>
               <li><a href="">Edit</a></li>
-              <li class="active"><a href=""><i data-icon="search"></i></a></li>
-              <li><a href=""><i data-icon="help_circle"></i></a></li>
+              <li class="active"><a href=""><i icon="search"></i></a></li>
+              <li><a href=""><i icon="help_circle"></i></a></li>
             </ul>
           </nav>
         </div>
         <div class="rc-row">
           <nav class="rc-toolbar dark">
             <ul class="right">
-              <li><a href=""><i data-icon="user"></i></a></li>
+              <li><a href=""><i icon="user"></i></a></li>
               <li><a href="">Edit</a></li>
-              <li class="active"><a href=""><i data-icon="search"></i></a></li>
-              <li><a href=""><i data-icon="help_circle"></i></a></li>
+              <li class="active"><a href=""><i icon="search"></i></a></li>
+              <li><a href=""><i icon="help_circle"></i></a></li>
             </ul>
           </nav>
         </div>
@@ -591,11 +591,11 @@
           <nav class="rc-toolbar">
             <ul class="rc-pagination right">
               <li>
-                <a href=""><i data-icon="angle_left"></i></a>
+                <a href=""><i icon="angle_left"></i></a>
               </li>
               <li>1 of 100</li>
               <li>
-                <a href=""><i data-icon="angle_right"></i></a>
+                <a href=""><i icon="angle_right"></i></a>
               </li>
             </ul>
           </nav>
@@ -604,11 +604,11 @@
           <nav class="rc-toolbar dark">
             <ul class="rc-pagination right">
               <li>
-                <a href=""><i data-icon="angle_left"></i></a>
+                <a href=""><i icon="angle_left"></i></a>
               </li>
               <li>1 of 100</li>
               <li>
-                <a href=""><i data-icon="angle_right"></i></a>
+                <a href=""><i icon="angle_right"></i></a>
               </li>
             </ul>
           </nav>
@@ -633,9 +633,9 @@
         <thead>
           <tr>
             <th>#</th>
-            <th>Column<i data-icon="sort"></i></th>
-            <th>Column<i data-icon="sort_asc"></i></th>
-            <th>Column<i data-icon="sort_desc"></i></th>
+            <th>Column<i icon="sort"></i></th>
+            <th>Column<i icon="sort_asc"></i></th>
+            <th>Column<i icon="sort_desc"></i></th>
           </tr>
         </thead>
         <tbody>
@@ -662,86 +662,86 @@
 
         <h2>Tooltips</h2>
         <div class="rc-center demo">
-          <div class="rc-tooltip active left" data-text="left">
+          <div class="rc-tooltip active left" tooltip="left">
             <button class="rc-button">Button 1</button>
           </div>
-          <div class="rc-tooltip active top" data-text="top">
+          <div class="rc-tooltip active top" tooltip="top">
             <button class="rc-button positive">Button 2</button>
           </div>
-          <div class="rc-tooltip active bottom" data-text="bottom">
+          <div class="rc-tooltip active bottom" tooltip="bottom">
             <button class="rc-button negative">Button 3</button>
           </div>
-          <div class="rc-tooltip active right" data-text="right">
+          <div class="rc-tooltip active right" tooltip="right">
             <button class="rc-button significant">Button 4</button>
           </div>
         </div>
         <div class="rc-center demo">
-          <div class="rc-tooltip active start left" data-text="left start">
+          <div class="rc-tooltip active start left" tooltip="left start">
             <button class="rc-button">Button 1</button>
           </div>
-          <div class="rc-tooltip active start top" data-text="top start">
+          <div class="rc-tooltip active start top" tooltip="top start">
             <button class="rc-button positive">Button 2</button>
           </div>
-          <div class="rc-tooltip active start bottom" data-text="bottom start">
+          <div class="rc-tooltip active start bottom" tooltip="bottom start">
             <button class="rc-button negative">Button 3</button>
           </div>
-          <div class="rc-tooltip active start right" data-text="right start">
+          <div class="rc-tooltip active start right" tooltip="right start">
             <button class="rc-button significant">Button 4</button>
           </div>
         </div>
         <div class="rc-center demo">
-          <div class="rc-tooltip active end left" data-text="left end">
+          <div class="rc-tooltip active end left" tooltip="left end">
             <button class="rc-button">Button 1</button>
           </div>
-          <div class="rc-tooltip active end top" data-text="top end">
+          <div class="rc-tooltip active end top" tooltip="top end">
             <button class="rc-button positive">Button 2</button>
           </div>
-          <div class="rc-tooltip active end bottom" data-text="bottom end">
+          <div class="rc-tooltip active end bottom" tooltip="bottom end">
             <button class="rc-button negative">Button 3</button>
           </div>
-          <div class="rc-tooltip active end right" data-text="right end">
+          <div class="rc-tooltip active end right" tooltip="right end">
             <button class="rc-button significant">Button 4</button>
           </div>
         </div>
         <div class="rc-center demo">
-          <div class="rc-tooltip active reverse left" data-text="left reverse">
+          <div class="rc-tooltip active reverse left" tooltip="left reverse">
             <button class="rc-button">Button 1</button>
           </div>
-          <div class="rc-tooltip active reverse top" data-text="top reverse">
+          <div class="rc-tooltip active reverse top" tooltip="top reverse">
             <button class="rc-button positive">Button 2</button>
           </div>
-          <div class="rc-tooltip active reverse bottom" data-text="bottom reverse">
+          <div class="rc-tooltip active reverse bottom" tooltip="bottom reverse">
             <button class="rc-button negative">Button 3</button>
           </div>
-          <div class="rc-tooltip active reverse right" data-text="right reverse">
+          <div class="rc-tooltip active reverse right" tooltip="right reverse">
             <button class="rc-button significant">Button 4</button>
           </div>
         </div>
         <div class="rc-center demo">
-          <div class="rc-tooltip active reverse left start" data-text="left reverse start">
+          <div class="rc-tooltip active reverse left start" tooltip="left reverse start">
             <button class="rc-button">Button 1</button>
           </div>
-          <div class="rc-tooltip active reverse top start" data-text="top reverse start">
+          <div class="rc-tooltip active reverse top start" tooltip="top reverse start">
             <button class="rc-button positive">Button 2</button>
           </div>
-          <div class="rc-tooltip active reverse bottom start" data-text="bottom reverse start">
+          <div class="rc-tooltip active reverse bottom start" tooltip="bottom reverse start">
             <button class="rc-button negative">Button 3</button>
           </div>
-          <div class="rc-tooltip active reverse right start" data-text="right reverse start">
+          <div class="rc-tooltip active reverse right start" tooltip="right reverse start">
             <button class="rc-button significant">Button 4</button>
           </div>
         </div>
         <div class="rc-center demo">
-          <div class="rc-tooltip active reverse left end" data-text="left reverse end">
+          <div class="rc-tooltip active reverse left end" tooltip="left reverse end">
             <button class="rc-button">Button 1</button>
           </div>
-          <div class="rc-tooltip active reverse top end" data-text="top reverse end">
+          <div class="rc-tooltip active reverse top end" tooltip="top reverse end">
             <button class="rc-button positive">Button 2</button>
           </div>
-          <div class="rc-tooltip active reverse bottom end" data-text="bottom reverse end">
+          <div class="rc-tooltip active reverse bottom end" tooltip="bottom reverse end">
             <button class="rc-button negative">Button 3</button>
           </div>
-          <div class="rc-tooltip active reverse right end" data-text="right reverse end">
+          <div class="rc-tooltip active reverse right end" tooltip="right reverse end">
             <button class="rc-button significant">Button 4</button>
           </div>
         </div>
